@@ -1,0 +1,96 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: "class",
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      "colors": {
+          "surface-container": "#202020",
+          "on-secondary-fixed": "#40000c",
+          "on-primary-fixed-variant": "#474646",
+          "surface-container-highest": "#353535",
+          "on-primary-fixed": "#1c1b1b",
+          "surface-tint": "#c9c6c5",
+          "outline": "#8e9192",
+          "background": "#131313",
+          "on-secondary-container": "#ffdcdc",
+          "on-secondary": "#68001a",
+          "tertiary-fixed": "#d8e2ff",
+          "primary-fixed": "#e5e2e1",
+          "on-error-container": "#ffdad6",
+          "on-surface": "#e5e2e1",
+          "tertiary-fixed-dim": "#adc6ff",
+          "inverse-on-surface": "#303030",
+          "on-surface-variant": "#c4c7c7",
+          "on-primary": "#313030",
+          "surface-container-lowest": "#0e0e0e",
+          "surface-dim": "#131313",
+          "primary": "#c9c6c5",
+          "on-tertiary-fixed": "#001a42",
+          "surface-bright": "#393939",
+          "primary-fixed-dim": "#c9c6c5",
+          "secondary-fixed": "#ffdada",
+          "inverse-primary": "#5f5e5e",
+          "inverse-surface": "#e5e2e1",
+          "error": "#ffb4ab",
+          "tertiary": "#adc6ff",
+          "on-tertiary": "#002e6a",
+          "on-primary-container": "#7c7a7a",
+          "outline-variant": "#444748",
+          "on-tertiary-fixed-variant": "#004395",
+          "secondary-container": "#cc003c",
+          "primary-container": "#0d0d0d",
+          "secondary-fixed-dim": "#ffb3b6",
+          "surface-container-low": "#1b1b1c",
+          "on-error": "#690005",
+          "on-tertiary-container": "#2b77ea",
+          "tertiary-container": "#000c26",
+          "surface-variant": "#353535",
+          "secondary": "#ffb3b6",
+          "on-secondary-fixed-variant": "#920028",
+          "on-background": "#e5e2e1",
+          "surface-container-high": "#2a2a2a",
+          "error-container": "#93000a",
+          "surface": "#131313"
+      },
+      "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+      },
+      "spacing": {
+          "unit": "4px",
+          "margin-desktop": "64px",
+          "margin-mobile": "20px",
+          "gutter": "24px",
+          "panel-gap": "1px"
+      },
+      "fontFamily": {
+          "display-xl": ["Hanken Grotesk"],
+          "label-technical": ["JetBrains Mono"],
+          "title-md": ["Hanken Grotesk"],
+          "headline-lg": ["Hanken Grotesk"],
+          "headline-lg-mobile": ["Hanken Grotesk"],
+          "body-lg": ["Inter"],
+          "body-md": ["Inter"]
+      },
+      "fontSize": {
+          "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "label-technical": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+          "title-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+          "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+          "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+          "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+      }
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/container-queries'),
+  ],
+}
