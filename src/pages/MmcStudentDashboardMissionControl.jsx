@@ -46,27 +46,7 @@ const MmcStudentDashboardMissionControl = () => {
       */}
       
 {/* Top Navigation Bar */}
-<header className="fixed top-0 w-full z-50 flex justify-between items-center h-16 px-margin-desktop bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant">
-<div className="flex items-center gap-8">
-<h1 className="font-display-xl text-[24px] font-bold text-secondary dark:text-secondary tracking-tighter">MMC STUDIO</h1>
 
-</div>
-<div className="flex items-center gap-4">
-<div className="relative flex items-center">
-<span className="material-symbols-outlined absolute left-3 text-on-surface-variant">search</span>
-<input className="bg-surface-container border-none text-label-technical font-label-technical pl-10 pr-4 py-2 w-64 rounded-none focus:ring-1 focus:ring-secondary" placeholder="CMD+K TO SEARCH" type="text" />
-</div>
-<button className="p-2 hover:bg-surface-container-high transition-colors active:scale-95">
-<span className="material-symbols-outlined text-primary">notifications</span>
-</button>
-<button className="p-2 hover:bg-surface-container-high transition-colors active:scale-95">
-<span className="material-symbols-outlined text-primary">settings</span>
-</button>
-<div className="w-8 h-8 rounded-full overflow-hidden border border-outline">
-<img alt="Student Profile Avatar" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC_OFU9XQGfS_Ei7s7-YTwKLcmQb-WSkpYLz4ezxbaEgNdssycA9HlWF0bwAnRa2n_erNxv-o6O59fMVS5CJPoKhOMawlfka6DRkqX8VHpBfbeScUNexAmn-r5st2QMcEMfnkxL1hpmvKnJijUCaB4tADR_lELF81kb_6SP__vFuj21yOhJ2vZyNXHvdll81vLA3gxJdLvG0H_EuFWDxcpIhs-xZuGCzjQS9YeXa0ApfQcqY1SX3R1GgqCoiIux27cyKY2T4Ly6GDN" />
-</div>
-</div>
-</header>
 {/* Side Navigation */}
 <aside className="fixed left-0 top-0 h-full w-64 flex flex-col pt-16 bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant dark:border-outline-variant hidden md:flex">
 <div className="p-6 border-b border-outline-variant/30">
@@ -112,7 +92,7 @@ const MmcStudentDashboardMissionControl = () => {
 </div>
 </aside>
 {/* Main Content Canvas */}
-<main className="md:ml-64 pt-24 px-6 md:px-margin-desktop pb-12">
+<div className="md:ml-64 pt-24 px-6 md:px-margin-desktop pb-12">
 {/* Mission Control Header */}
 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-outline-variant pb-8">
 <div>
@@ -332,7 +312,7 @@ const MmcStudentDashboardMissionControl = () => {
 </div>
 </div>
 </div>
-</main>
+</div>
 {/* Bottom Navigation Bar (Mobile Only) */}
 
 

@@ -29,4 +29,121 @@
       position: absolute;
       left: 45%;
   }
+
+  /* Tonal layering (port from Stitch designs) */
+  .tonal-layer-1 {
+      background-color: #1b1b1c;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .tonal-layer-2 {
+      background-color: #202020;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .studio-border {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .studio-card:hover .studio-border {
+      border-color: rgba(204, 0, 60, 0.4);
+  }
+
+  /* Glows & highlights */
+  .inner-glow-btn {
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .accent-glow {
+      box-shadow: 0 0 20px rgba(204, 0, 60, 0.2);
+  }
+  .pink-glow {
+      text-shadow: 0 0 10px rgba(255, 179, 182, 0.4);
+  }
+  .glow-secondary:focus {
+      box-shadow: 0 0 10px rgba(204, 0, 60, 0.3);
+      border-color: #cc003c;
+  }
+
+  /* Technical grid backgrounds */
+  .vfx-grid-pattern {
+      background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+  }
+  .grid-overlay {
+      background-image:
+          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+  }
+  .nle-divider {
+      border-color: #444748;
+  }
+
+  /* Form focus glow */
+  .studio-glow:focus {
+      outline: none;
+      border-color: #adc6ff;
+      box-shadow: 0 0 0 2px rgba(173, 198, 255, 0.2);
+  }
+
+  /* Timeline scrubber (film editing) */
+  .timeline-scrubber {
+      height: 2px;
+      background: #444748;
+      position: relative;
+  }
+  .timeline-playhead {
+      width: 2px;
+      height: 12px;
+      background: #cc003c;
+      position: absolute;
+      top: -5px;
+      left: 35%;
+  }
+
+  /* Animated scanline */
+  .scanline {
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #ffb3b6, transparent);
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      animation: scan 8s linear infinite;
+  }
+
+  /* Asset library card */
+  .asset-actions {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+  }
+  .asset-card:hover .asset-actions {
+      opacity: 1;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #444748;
+      border-radius: 9999px;
+  }
+
+  /* Marquee for recruiter/partner logos */
+  .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 40s linear infinite;
+  }
+  .marquee-track:hover {
+      animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
 }

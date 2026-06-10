@@ -46,20 +46,8 @@ const MmcStudentWorkGallery = () => {
       */}
       
 {/* TopNavBar */}
-<header className="bg-background dark:bg-background border-b border-outline-variant fixed top-0 w-full z-50">
-<div className="flex justify-between items-center w-full px-margin-desktop h-20 max-w-full mx-auto">
-<div className="font-headline-lg text-headline-lg font-bold text-on-background dark:text-on-background">
-                Multimedia Institute
-            </div>
 
-<div className="flex items-center gap-6">
-<button className="bg-secondary-container text-on-secondary-container px-6 py-2 rounded font-body-md text-body-md hover:opacity-80 transition-opacity">
-                    Apply Now
-                </button>
-</div>
-</div>
-</header>
-<main className="pt-20">
+<div className="pt-20">
 {/* Hero Section */}
 <section className="relative h-[614px] flex items-center overflow-hidden bg-surface-container-lowest">
 
@@ -218,8 +206,8 @@ const MmcStudentWorkGallery = () => {
 </div>
 </div>
 </section>
-</main>
-{/* Footer */}
+</div>
+
 
 
 

@@ -72,27 +72,10 @@ const MmcProductionTimelineSchedule = () => {
 </div>
 </aside>
 {/* Main Content Canvas */}
-<main className="flex-1 ml-0 md:ml-64 flex flex-col h-screen bg-primary-container relative">
+<div className="flex-1 ml-0 md:ml-64 flex flex-col h-screen bg-primary-container relative">
 <div className="absolute inset-0 technical-grid opacity-20 pointer-events-none"></div>
 {/* TopNavBar Predicted Component */}
-<header className="bg-surface-container-lowest dark:bg-surface-container-lowest flex justify-between items-center w-full px-8 md:px-margin-desktop h-16 docked full-width top-0 border-b border-outline-variant/10 z-30 relative">
-<div className="flex items-center gap-4">
-<h1 className="text-brand-logo text-title-md font-title-md font-bold text-on-surface dark:text-on-surface">MMC Institute</h1>
-</div>
-<div className="flex items-center gap-6">
-<div className="hidden md:flex items-center gap-8">
-<span className="text-label-technical font-label-technical text-on-surface-variant uppercase">Frames Sync: 100%</span>
-<span className="text-label-technical font-label-technical text-secondary uppercase flex items-center gap-2">
-<span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                        System_Sync: Active
-                    </span>
-</div>
-<div className="flex items-center gap-4">
-<button className="material-symbols-outlined text-secondary hover:bg-surface-bright/10 p-2 rounded transition-all">search</button>
-<button className="material-symbols-outlined text-secondary hover:bg-surface-bright/10 p-2 rounded transition-all">notifications</button>
-</div>
-</div>
-</header>
+
 {/* Production Timeline Header */}
 <div className="px-8 md:px-margin-desktop py-8 bg-surface-container-lowest/50 border-b border-outline-variant/10 backdrop-blur-md relative z-10">
 <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -271,7 +254,7 @@ const MmcProductionTimelineSchedule = () => {
 </div>
 {/* Footer Predicted Component */}
 
-</main>
+</div>
 {/* Micro-interaction Script */}
 
 

@@ -17,6 +17,8 @@ import MmcStudentDashboardMissionControl from './pages/MmcStudentDashboardMissio
 import MmcStudentWorkGallery from './pages/MmcStudentWorkGallery';
 import MmcVfxProductionPipelineTracker from './pages/MmcVfxProductionPipelineTracker';
 import MmcVisualEffectsCurriculum from './pages/MmcVisualEffectsCurriculum';
+import MmcGamingCurriculum from './pages/MmcGamingCurriculum';
+import MmcBroadcastCurriculum from './pages/MmcBroadcastCurriculum';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
           <Route path="/mmc-student-work-gallery" element={<MmcStudentWorkGallery />} />
           <Route path="/mmc-vfx-production-pipeline-tracker" element={<MmcVfxProductionPipelineTracker />} />
           <Route path="/mmc-visual-effects-curriculum" element={<MmcVisualEffectsCurriculum />} />
+          <Route path="/mmc-gaming-curriculum" element={<MmcGamingCurriculum />} />
+          <Route path="/mmc-broadcast-curriculum" element={<MmcBroadcastCurriculum />} />
         </Routes>
       </Layout>
     </Router>

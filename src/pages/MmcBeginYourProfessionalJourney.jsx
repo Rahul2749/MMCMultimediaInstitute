@@ -46,12 +46,8 @@ const MmcBeginYourProfessionalJourney = () => {
       */}
       
 {/* TopNavBar from JSON */}
-<header className="bg-background/95 backdrop-blur-md border-b border-outline-variant sticky top-0 z-[100] flex justify-between items-center w-full px-margin-desktop h-16">
-<div className="font-display-xl text-[24px] font-extrabold text-secondary">MMC</div>
 
-<button className="bg-secondary text-on-secondary px-6 py-2 font-label-technical text-label-technical font-bold rounded-DEFAULT scale-95 active:opacity-80 transition-all duration-150">Enroll Now</button>
-</header>
-<main className="min-h-[calc(100vh-64px)] py-12 px-margin-mobile md:px-margin-desktop">
+<div className="min-h-[calc(100vh-64px)] py-12 px-margin-mobile md:px-margin-desktop">
 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
 {/* Left Column: Form Section */}
 <div className="lg:col-span-8">
@@ -230,7 +226,7 @@ const MmcBeginYourProfessionalJourney = () => {
 </div>
 </aside>
 </div>
-</main>
+</div>
 {/* Footer from JSON */}
 
 

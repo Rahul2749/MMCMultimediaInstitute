@@ -47,7 +47,7 @@ const MmcProjectCaseStudyNeonDrift = () => {
       
 {/* TopNavBar */}
 
-<main className="pt-20">
+<div className="pt-20">
 {/* Hero Section */}
 <section className="relative h-[870px] w-full flex flex-col justify-end overflow-hidden">
 <img className="absolute inset-0 w-full h-full object-cover" data-alt="A sprawling futuristic cityscape at night viewed from a high vantage point, featuring dense skyscrapers illuminated by vibrant pink and cyan neon signs. Wet asphalt streets reflect the complex light sources, while a light atmospheric haze softens the distant structures. The cinematic composition uses deep blacks and high-contrast lighting to create a professional VFX studio aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9AMsBVF44QhfaMP7AGQmrDEL-g4jyvfdAPok5ZkSilysK9LPjtPbm1piVHuRDXueqIS5AAXLICLUbsaOzsQ5boOPmSNbfR0XCzvv-JjBzJI8IKwmvgDBjYiwFPIq-hRM_pZFYkx6YWu9Xd3xgyhzpBI-67SeAoo1q48mFDXAdUGMW99DbsD_937Niw3pI6FVTNu_D_ID4ackikATVIhBJxantuo26o_AJY3Op7tpFLLGQ0Rfazi4cIoA7w2tip4CIOjpkSPwSXgNR" />
@@ -225,8 +225,8 @@ const MmcProjectCaseStudyNeonDrift = () => {
 <button className="bg-on-secondary text-secondary px-10 py-4 font-body-md font-bold hover:scale-95 transition-transform">Explore the VFX Track</button>
 </div>
 </section>
-</main>
-{/* Footer */}
+</div>
+
 
 
 

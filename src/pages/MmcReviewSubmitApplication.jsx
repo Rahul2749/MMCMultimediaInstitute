@@ -47,7 +47,7 @@ const MmcReviewSubmitApplication = () => {
       
 {/* TopNavBar */}
 
-<main className="min-h-screen relative overflow-hidden pb-24">
+<div className="min-h-screen relative overflow-hidden pb-24">
 {/* Background Animation Overlay */}
 
 <div className="max-w-4xl mx-auto px-margin-mobile md:px-0 pt-12 relative z-10">
@@ -183,8 +183,8 @@ const MmcReviewSubmitApplication = () => {
 </div>
 </div>
 </div>
-</main>
-{/* Footer */}
+</div>
+
 
 
 

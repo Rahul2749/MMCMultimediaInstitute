@@ -48,7 +48,7 @@ const MmcPortfolioSubmissionStep = () => {
 {/* TopNavBar */}
 
 {/* Main Workspace Container */}
-<main className="min-h-screen technical-grid pt-12 pb-24">
+<div className="min-h-screen technical-grid pt-12 pb-24">
 <div className="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 {/* Content Canvas (Left) */}
 <div className="lg:col-span-8 space-y-8">
@@ -172,8 +172,8 @@ const MmcPortfolioSubmissionStep = () => {
 </div>
 </aside>
 </div>
-</main>
-{/* Footer */}
+</div>
+
 
 
 

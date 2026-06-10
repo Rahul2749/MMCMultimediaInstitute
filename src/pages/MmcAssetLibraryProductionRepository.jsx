@@ -46,27 +46,7 @@ const MmcAssetLibraryProductionRepository = () => {
       */}
       
 {/* TOP APP BAR */}
-<header className="fixed top-0 w-full z-50 border-b border-outline-variant bg-surface-container-lowest flex justify-between items-center h-16 px-margin-desktop">
-<div className="flex items-center gap-8">
-<span className="font-display-xl text-[24px] font-bold text-secondary tracking-tighter">MMC STUDIO</span>
-<div className="hidden md:flex gap-6 items-center">
-<span className="text-on-surface-variant font-medium font-label-technical text-label-technical hover:bg-surface-container-high transition-colors duration-200 px-3 py-1 rounded cursor-pointer">PIPELINE</span>
-<span className="text-secondary font-bold font-label-technical text-label-technical bg-secondary-container/10 px-3 py-1 rounded cursor-pointer">ASSETS</span>
-<span className="text-on-surface-variant font-medium font-label-technical text-label-technical hover:bg-surface-container-high transition-colors duration-200 px-3 py-1 rounded cursor-pointer">RENDER CLOUD</span>
-</div>
-</div>
-<div className="flex items-center gap-4">
-<div className="relative hidden lg:block">
-<span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
-<input className="bg-surface-container border border-outline-variant text-on-surface rounded-lg pl-10 pr-4 py-1.5 text-sm w-64 focus:outline-none focus:border-secondary transition-all" placeholder="Global Search..." type="text" />
-</div>
-<button className="material-symbols-outlined text-primary p-2 hover:bg-surface-container-high transition-colors duration-200 rounded-lg">notifications</button>
-<button className="material-symbols-outlined text-primary p-2 hover:bg-surface-container-high transition-colors duration-200 rounded-lg">settings</button>
-<div className="w-8 h-8 rounded-full overflow-hidden border border-outline-variant ml-2">
-<img alt="Student Profile Avatar" className="w-full h-full object-cover" data-alt="A professional studio portrait of a digital artist with cool, high-contrast lighting. The background is a dark, sophisticated studio setting with subtle red neon accents, mirroring the MMC brand identity. The individual looks focused and creative, wearing modern technical apparel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmbUJM9P8xElLGseGwNqP3myolZRzoloLJKCTcuokrM5m3P0YnjvhoKZoM6nKAPzvkm4xwG53Y0ufl2zbxfJ4xRusOIfMAPawwx7uESUJxXU60W-Ro4pZROqad9D3gveuY8heqml6Vpvpmpm7ZhdAYHxnRhQyIdzUrrkZjUOLQtJKvX-lKIMe5Z_zxZ6GJwRj7d60Kn8aUAV7dAHSspR3wF_NIdb8yolh_bmpb43TuAH5Pb7OB7Ul2c-fuoSDc3fi5QY-Ri6xsAdya" />
-</div>
-</div>
-</header>
+
 <div className="flex h-full pt-16">
 {/* SIDE NAV BAR */}
 <aside className="fixed left-0 top-0 h-full w-64 flex flex-col pt-16 bg-surface-container-low border-r border-outline-variant z-40">
@@ -89,7 +69,7 @@ const MmcAssetLibraryProductionRepository = () => {
 </div>
 </aside>
 {/* MAIN CONTENT CANVAS */}
-<main className="ml-64 flex-1 h-full overflow-hidden flex flex-col relative technical-grid">
+<div className="ml-64 flex-1 h-full overflow-hidden flex flex-col relative technical-grid">
 {/* Metadata & Search Panel */}
 <div className="bg-surface-container/80 backdrop-blur-md border-b border-outline-variant p-4 flex items-center justify-between gap-4 z-10">
 <div className="flex items-center gap-2 overflow-x-auto whitespace-nowrap custom-scrollbar">
@@ -313,7 +293,7 @@ const MmcAssetLibraryProductionRepository = () => {
                     </button>
 </div>
 </div>
-</main>
+</div>
 </div>
 {/* Micro-interaction Scripts */}
 

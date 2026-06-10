@@ -88,7 +88,7 @@ const Mmc3dAnimationCurriculum = () => {
 </div>
 </aside>
 {/* Main Content */}
-<main className="flex-1 min-w-0">
+<div className="flex-1 min-w-0">
 {/* Hero Section */}
 <section className="relative h-[819px] flex items-center overflow-hidden border-b border-outline-variant">
 <div className="absolute inset-0 z-0">
@@ -245,9 +245,9 @@ const Mmc3dAnimationCurriculum = () => {
 </div>
 </div>
 </section>
-{/* Footer */}
 
-</main>
+
+</div>
 </div>
 {/* Micro-interactions Script */}
 

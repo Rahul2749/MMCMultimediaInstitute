@@ -51,15 +51,8 @@ const MmcGraphicDesignCurriculum = () => {
 <feTurbulence baseFrequency="0.6" stitchTiles="stitch" type="fractalNoise"></feTurbulence>
 </filter>
 </svg>
-{/* TopAppBar */}
-<header className="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-background/80 backdrop-blur-md border-b border-white/10">
-<div className="font-headline-lg text-headline-lg font-bold text-on-surface uppercase tracking-tighter">Multimedia Institute</div>
 
-<div className="flex items-center gap-6">
-<span className="material-symbols-outlined text-on-surface-variant cursor-pointer">search</span>
-<button className="bg-secondary-container text-on-secondary-container px-6 py-2 font-title-md text-title-md rounded hover:opacity-90 transition-all">Apply Now</button>
-</div>
-</header>
+
 {/* SideNavBar (Desktop Only) */}
 <aside className="hidden lg:flex flex-col fixed left-0 top-16 h-full w-64 bg-surface-container border-r border-white/10 py-8 z-40">
 <div className="px-6 mb-8">
@@ -81,7 +74,7 @@ const MmcGraphicDesignCurriculum = () => {
 </div>
 </aside>
 {/* Main Content */}
-<main className="lg:pl-64 pt-16 min-h-screen">
+<div className="lg:pl-64 pt-16 min-h-screen">
 {/* Hero Section */}
 <section className="relative h-[819px] flex items-center overflow-hidden technical-grid border-b border-white/5">
 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent z-10"></div>
@@ -257,9 +250,9 @@ const MmcGraphicDesignCurriculum = () => {
                 </button>
 </div>
 </section>
-{/* Footer */}
 
-</main>
+
+</div>
 {/* Micro-interactions Script */}
 
 

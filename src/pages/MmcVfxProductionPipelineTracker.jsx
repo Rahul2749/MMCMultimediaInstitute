@@ -68,28 +68,9 @@ const MmcVfxProductionPipelineTracker = () => {
 </div>
 </aside>
 {/* Main Content Area */}
-<main className="flex-1 flex flex-col min-w-0 bg-background relative tech-grid overflow-hidden">
+<div className="flex-1 flex flex-col min-w-0 bg-background relative tech-grid overflow-hidden">
 {/* TopNavBar */}
-<header className="flex justify-between items-center px-gutter w-full h-16 bg-surface border-b border-outline-variant shrink-0 z-10">
-<div className="flex items-center space-x-6">
-<span className="font-display-xl text-title-md font-bold text-on-surface">MMC_PIPELINE_V1</span>
-<div className="hidden lg:flex items-center bg-surface-container-low border border-outline-variant px-3 py-1.5 rounded-sm">
-<span className="material-symbols-outlined text-sm text-on-surface-variant mr-2">search</span>
-<input className="bg-transparent border-none focus:ring-0 text-label-technical font-label-technical text-on-surface w-64 placeholder:text-on-surface-variant/40" placeholder="Filter shots, tags, or artists..." type="text" />
-</div>
-</div>
-<div className="flex items-center space-x-4">
-<button className="p-2 text-on-surface-variant hover:bg-surface-variant transition-colors active:scale-95 duration-100">
-<span className="material-symbols-outlined">notifications</span>
-</button>
-<button className="p-2 text-on-surface-variant hover:bg-surface-variant transition-colors active:scale-95 duration-100">
-<span className="material-symbols-outlined">settings</span>
-</button>
-<div className="h-8 w-8 bg-surface-variant rounded-full overflow-hidden border border-outline-variant">
-<img alt="User profile" className="w-full h-full object-cover" data-alt="A close-up portrait of a professional film editor in a dimly lit studio environment. The man has a focused expression, highlighted by the subtle blue and magenta glow from high-resolution monitors reflecting on his face. He wears professional studio headphones, and the background shows blurred high-end cinema equipment. The aesthetic is sharp, technical, and high-performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlrmvlBTuASigDKHyhwisOCdipm28g_P_3r2md2ya1kr3L0wqFjyv81DQyGkp49zxyRNAh-yytCGQQ_ylVL42qhkvrEb8_Ng_xryB9wtVm534kFWFSp46kXzlAJMhDE4etr-CxRuG7BYGZX8Hsbea4p33mhDzVgWqf93HxZjbfa6Meg7lFZmjUxo0hEHK_sJFRYEeDGQqYRRClql5WeiLNUP9Xj4wxGjoUwriDCB4xgh4_iZlhDONiNtqz97BxVUizzeFSwBo1vXqC" />
-</div>
-</div>
-</header>
+
 {/* Dashboard Layout */}
 <div className="flex-1 flex overflow-hidden">
 {/* Center Pipeline Area */}
@@ -297,7 +278,7 @@ const MmcVfxProductionPipelineTracker = () => {
 </div>
 </aside>
 </div>
-</main>
+</div>
 </div>
 {/* Mobile Bottom NavBar (Visible on small screens) */}
 

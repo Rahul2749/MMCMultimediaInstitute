@@ -45,22 +45,9 @@ const MmcVisualEffectsCurriculum = () => {
         Example: <section ref={addToRefs} className="...">
       */}
       
-{/* TopAppBar */}
-<header className="w-full top-0 sticky z-50 bg-background border-b border-surface-variant flex justify-between items-center px-gutter h-16">
-<div className="flex items-center gap-8">
-<span className="font-display-xl text-title-md font-bold text-primary">MMC</span>
 
-</div>
-<div className="flex items-center gap-4">
-<div className="hidden md:flex items-center bg-surface-container rounded px-3 py-1 border border-outline-variant">
-<span className="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
-<input className="bg-transparent border-none focus:ring-0 text-body-md text-on-surface w-48 placeholder:text-outline" placeholder="Search workstation..." type="text" />
-</div>
-<button className="material-symbols-outlined text-primary hover:bg-surface-container-high transition-colors duration-200 p-2 rounded">account_circle</button>
-<button className="bg-secondary-container text-on-secondary-container px-4 py-2 font-body-md font-bold rounded inner-glow-btn active:opacity-80 transition-all">Enroll Now</button>
-</div>
-</header>
-<main className="relative">
+
+<div className="relative">
 {/* Hero Section */}
 <section className="relative min-h-[716px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-24 overflow-hidden border-b border-surface-variant">
 <div className="absolute inset-0 vfx-grid-pattern opacity-40"></div>
@@ -206,8 +193,8 @@ const MmcVisualEffectsCurriculum = () => {
 </div>
 </div>
 </section>
-</main>
-{/* Footer */}
+</div>
+
 
 
 

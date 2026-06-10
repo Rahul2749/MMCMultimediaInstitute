@@ -48,33 +48,7 @@ const MmcFilmEditingCurriculum = () => {
 {/* TopNavBar */}
 
 {/* Hero Section */}
-<header className="relative w-full h-[870px] flex items-end overflow-hidden bg-surface-container-lowest">
-{/* Background Asset */}
-<div className="absolute inset-0 z-0">
-<img alt="Cinematic film editing suite" className="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="A dark, high-end professional post-production editing suite featuring three wide-screen monitors displaying complex video timelines and color grading wheels. The room is dimly lit with subtle ambient red neon backlighting, creating a focused, high-performance atmosphere. The equipment is sleek and modern, with a physical control surface console for DaVinci Resolve in the foreground. Professional cinematic lighting and deep black surfaces define the technical minimalism style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEGJYmsap6dqAqHGCF-X-q1yOOFVPbgyNQBaCxeCyNlWl9I__iUS7kTo_JZvBB6kNFXPr5cIBQnqMgk_jEynfAsCWRpvJHh0Db9uHvR1yly5-COPNbVGZ8_QoCwrEFGtHEOlWCglspBb5S6rTyX8jEZZpIErYIaAsj07wLlcxiXnr1MyoNKAzW9-wkDggUicxkhu2DBMF6ZzgGvszGd8BG7E0zaQm_gnvuO9axi8bGP1B_OTsmNAgSoJUudnSuydvERS3p4qYPAUkp" />
-<div className="absolute inset-0 scrim-bottom"></div>
-<div className="absolute inset-0 scrim-left hidden md:block"></div>
-</div>
-<div className="relative z-10 px-margin-mobile md:px-margin-desktop pb-20 max-w-4xl">
-<div className="inline-flex items-center gap-2 bg-secondary-container/20 border border-secondary-container/40 px-3 py-1 mb-6 rounded">
-<span className="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
-<span className="font-label-technical text-label-technical uppercase tracking-widest text-secondary">20-Week Professional Track</span>
-</div>
-<h1 className="font-display-xl text-headline-lg-mobile md:text-display-xl text-on-surface mb-4 leading-[1.05]">Film Editing Specialist</h1>
-<p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                Master the art of narrative, rhythm, and technical precision in an industry-standard environment. Transition from assembly to final delivery using world-class workflows.
-            </p>
-<div className="flex flex-col md:flex-row gap-4">
-<button className="bg-secondary-container text-white px-8 py-4 rounded-lg font-title-md transition-all hover:brightness-110 active:scale-95">
-                    Download Syllabus
-                </button>
-<div className="flex items-center gap-4 px-4">
-<span className="font-label-technical text-label-technical text-outline">Next Cohort:</span>
-<span className="font-label-technical text-label-technical text-on-surface">October 10, 2024</span>
-</div>
-</div>
-</div>
-</header>
+
 {/* Course Overview Grid */}
 <section className="py-24 px-margin-mobile md:px-margin-desktop bg-background">
 <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
@@ -231,7 +205,7 @@ const MmcFilmEditingCurriculum = () => {
 </div>
 </div>
 </section>
-{/* Footer */}
+
 
 
 

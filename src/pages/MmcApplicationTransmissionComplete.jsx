@@ -46,15 +46,8 @@ const MmcApplicationTransmissionComplete = () => {
       */}
       
 {/* TopNavBar */}
-<header className="flex justify-between items-center w-full px-margin-desktop h-16 sticky top-0 z-[100] border-b border-outline-variant bg-background/95 backdrop-blur-md">
-<div className="font-display-xl text-[32px] font-extrabold text-secondary tracking-tighter">MMC</div>
 
-<div className="flex items-center gap-6">
-<button className="material-symbols-outlined text-on-surface-variant hover:text-secondary transition-colors">search</button>
-<button className="bg-secondary text-on-secondary px-6 py-2 font-label-technical text-label-technical font-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">Enroll Now</button>
-</div>
-</header>
-<main className="relative min-h-[calc(100vh-64px)] flex flex-col items-center pt-24 pb-32 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div className="relative min-h-[calc(100vh-64px)] flex flex-col items-center pt-24 pb-32 px-margin-mobile md:px-margin-desktop overflow-hidden">
 {/* Background Decor */}
 <div className="absolute inset-0 technical-grid pointer-events-none -z-10"></div>
 <div className="scanline"></div>
@@ -166,8 +159,8 @@ const MmcApplicationTransmissionComplete = () => {
 </div>
 </div>
 </div>
-</main>
-{/* Footer */}
+</div>
+
 
 
 

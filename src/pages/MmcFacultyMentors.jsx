@@ -45,13 +45,9 @@ const MmcFacultyMentors = () => {
         Example: <section ref={addToRefs} className="...">
       */}
       
-{/* TopAppBar */}
-<header className="fixed top-0 w-full z-50 bg-surface dark:bg-surface border-b border-outline-variant flex items-center justify-between px-64 h-16 w-full max-lg:px-10">
-<div className="font-display-xl text-title-md font-bold text-on-surface tracking-tight">MMC Institute</div>
 
-<button className="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg font-title-md text-body-md hover:bg-opacity-90 transition-all font-bold">Join Faculty</button>
-</header>
-<main className="pt-16">
+
+<div className="pt-16">
 {/* Hero Section */}
 <section className="relative min-h-[70vh] flex items-center px-64 max-lg:px-10 py-24 overflow-hidden">
 <div className="grid-overlay absolute inset-0 pointer-events-none opacity-40"></div>
@@ -185,8 +181,8 @@ const MmcFacultyMentors = () => {
 </div>
 </div>
 </section>
-</main>
-{/* Footer */}
+</div>
+
 
 
 
