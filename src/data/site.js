@@ -71,6 +71,138 @@ export const COURSES = [
 
 // Detailed course definitions for the reusable CourseTemplate pages.
 export const COURSE_DETAILS = {
+  animation: {
+    code: 'ANIM',
+    eyebrow: '24-Week Intensive Program',
+    title: '3D',
+    titleAccent: 'Animation',
+    intro:
+      'Bring characters and worlds to life. Master the full animation pipeline — from modelling and rigging to performance and lighting — and graduate with a reel that studios notice.',
+    modules: [
+      {
+        no: '01',
+        title: 'Modelling & Sculpting',
+        desc: 'Build production-ready characters and environments with clean topology and detail.',
+        points: ['Hard-Surface & Organic', 'UV & Topology', 'ZBrush Sculpting'],
+      },
+      {
+        no: '02',
+        title: 'Rigging & Performance',
+        desc: 'Rig believable characters and craft compelling, weighty performances.',
+        points: ['Skeletal Rigging', 'Body Mechanics', 'Facial Animation'],
+      },
+      {
+        no: '03',
+        title: 'Lighting & Look-Dev',
+        desc: 'Light, shade and render your work to a polished, cinematic finish.',
+        points: ['PBR Shading', 'Cinematic Lighting', 'Arnold Rendering'],
+      },
+    ],
+    tools: [
+      { abbr: 'M', name: 'Maya', color: 'text-tertiary' },
+      { abbr: 'Bl', name: 'Blender', color: 'text-secondary' },
+      { abbr: 'Zb', name: 'ZBrush', color: 'text-on-tertiary-container' },
+    ],
+  },
+  vfx: {
+    code: 'VFX',
+    eyebrow: '24-Week Intensive Program',
+    title: 'Visual Effects',
+    titleAccent: 'Specialist',
+    intro:
+      'Master the high-end compositing and node-based workflows used by top global studios. From photorealistic integration to massive procedural simulations, prepare for a career as a Compositor or FX TD.',
+    modules: [
+      {
+        no: '01',
+        title: 'Advanced Compositing (Nuke)',
+        desc: 'Multi-channel EXR workflows, 3D projections and high-end keying in Nuke.',
+        points: ['Deep Compositing', 'Advanced Keying', 'Python Scripting'],
+      },
+      {
+        no: '02',
+        title: 'Dynamic Simulations (Houdini)',
+        desc: 'Procedural FX: fluids, pyro and large-scale destruction.',
+        points: ['FLIP Fluids & Pyro', 'VEX Programming', 'Rigid Body Dynamics'],
+      },
+      {
+        no: '03',
+        title: '3D Integration & Matchmoving',
+        desc: 'Camera tracking, photogrammetry and look-dev for seamless integration.',
+        points: ['3DEqualizer Tracking', 'Arnold Render', 'HDRI Pipeline'],
+      },
+    ],
+    tools: [
+      { abbr: 'Nk', name: 'Nuke', color: 'text-secondary' },
+      { abbr: 'H', name: 'Houdini', color: 'text-tertiary' },
+      { abbr: 'M', name: 'Maya', color: 'text-on-tertiary-container' },
+    ],
+  },
+  'film-editing': {
+    code: 'EDIT',
+    eyebrow: '18-Week Intensive Program',
+    title: 'Film Making &',
+    titleAccent: 'Editing',
+    intro:
+      'Tell stories that move people. Learn the craft of rhythm, pace and structure, plus colour and sound, using the industry-standard tools of modern post-production.',
+    modules: [
+      {
+        no: '01',
+        title: 'Narrative Editing',
+        desc: 'Shape story through pacing, continuity and emotional rhythm.',
+        points: ['Story Structure', 'Continuity', 'Multicam Editing'],
+      },
+      {
+        no: '02',
+        title: 'Colour Grading',
+        desc: 'Develop a cinematic look with primary and secondary grading.',
+        points: ['Colour Theory', 'Node Grading', 'DaVinci Resolve'],
+      },
+      {
+        no: '03',
+        title: 'Sound & Finishing',
+        desc: 'The edit is only as good as its sound — mix, master and deliver.',
+        points: ['Sound Design', 'Spatial Mixing', 'Delivery & Export'],
+      },
+    ],
+    tools: [
+      { abbr: 'Pr', name: 'Premiere Pro', color: 'text-tertiary' },
+      { abbr: 'Rv', name: 'DaVinci Resolve', color: 'text-secondary' },
+      { abbr: 'Au', name: 'Audition', color: 'text-on-tertiary-container' },
+    ],
+  },
+  'graphic-design': {
+    code: 'DSGN',
+    eyebrow: '20-Week Intensive Program',
+    title: 'Graphic & Web',
+    titleAccent: 'Design',
+    intro:
+      'Learn the science of visual communication. Build brand systems, layouts and interfaces with precision typography and modern web design fundamentals.',
+    modules: [
+      {
+        no: '01',
+        title: 'Brand & Identity',
+        desc: 'Craft logos, identity systems and brand guidelines that scale.',
+        points: ['Typography', 'Logo Systems', 'Brand Guidelines'],
+      },
+      {
+        no: '02',
+        title: 'Layout & Print',
+        desc: 'Master grids, hierarchy and print-ready production.',
+        points: ['Grid Systems', 'Editorial Layout', 'Prepress'],
+      },
+      {
+        no: '03',
+        title: 'UI & Web Design',
+        desc: 'Design responsive interfaces and prototype real products.',
+        points: ['UI/UX Principles', 'Responsive Design', 'Figma Prototyping'],
+      },
+    ],
+    tools: [
+      { abbr: 'Ai', name: 'Illustrator', color: 'text-secondary' },
+      { abbr: 'Ps', name: 'Photoshop', color: 'text-tertiary' },
+      { abbr: 'Fg', name: 'Figma', color: 'text-on-tertiary-container' },
+    ],
+  },
   'gaming-interactive': {
     code: 'GAME',
     eyebrow: '24-Week Intensive Program',

@@ -49,7 +49,7 @@ const MmcFacultyMentors = () => {
 
 <div className="pt-16">
 {/* Hero Section */}
-<section className="relative min-h-[70vh] flex items-center px-64 max-lg:px-10 py-24 overflow-hidden">
+<section className="relative min-h-[70vh] flex items-center px-margin-mobile md:px-margin-desktop py-24 overflow-hidden">
 <div className="grid-overlay absolute inset-0 pointer-events-none opacity-40"></div>
 <div className="absolute inset-0 bg-gradient-to-tr from-surface via-transparent to-secondary/5 pointer-events-none"></div>
 <div className="relative z-10 max-w-4xl">
@@ -71,7 +71,7 @@ const MmcFacultyMentors = () => {
 </div>
 </section>
 {/* Faculty Grid Section */}
-<section className="px-64 max-lg:px-10 py-24 bg-surface-container-lowest relative">
+<section className="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-lowest relative">
 <div className="flex items-center justify-between mb-16">
 <div className="flex flex-col gap-2">
 <h2 className="font-headline-lg text-headline-lg">Meet Your <span className="text-secondary">Mentors</span></h2>
@@ -159,7 +159,7 @@ const MmcFacultyMentors = () => {
 </div>
 </section>
 {/* CTA Section */}
-<section className="relative py-32 px-64 max-lg:px-10 bg-surface overflow-hidden">
+<section className="relative py-32 px-margin-mobile md:px-margin-desktop bg-surface overflow-hidden">
 <div className="grid-overlay absolute inset-0 opacity-20"></div>
 <div className="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface pointer-events-none"></div>
 <div className="relative z-10 flex flex-col items-center text-center">
