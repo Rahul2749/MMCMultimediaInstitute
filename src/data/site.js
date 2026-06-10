@@ -37,7 +37,7 @@ export const COURSES = [
     tagline: 'Learn to make an impact in the digital age.',
     color: 'on-surface',
     duration: '20 Weeks',
-    image: '',
+    image: '/images/graphic_design.png',
   },
   {
     slug: '/mmc-film-editing-curriculum',
@@ -56,7 +56,7 @@ export const COURSES = [
     tagline: 'Design immersive worlds and interactive experiences for gamers.',
     color: 'tertiary',
     duration: '24 Weeks',
-    image: '',
+    image: '/images/gaming_interactive.png',
   },
   {
     slug: '/mmc-broadcast-curriculum',
@@ -65,7 +65,7 @@ export const COURSES = [
     tagline: 'Design visuals that grab attention and build iconic spaces in 3D.',
     color: 'on-surface',
     duration: '16 Weeks',
-    image: '',
+    image: '/images/broadcast_archviz.png',
   },
 ];
 
