@@ -4,14 +4,14 @@ import { COURSES, SITE_CONTACT } from '../data/site';
 
 const Footer = () => {
   return (
-    <footer className="bg-ink text-on-ink relative overflow-hidden px-margin-mobile md:px-margin-desktop py-16">
+    <footer className="bg-ink text-on-ink relative overflow-hidden px-margin-mobile md:px-margin-desktop py-16 border-t-4 border-secondary grain">
       <div className="absolute inset-0 ink-grid-pattern opacity-30" />
       <div className="absolute -top-20 left-1/3 w-96 h-72 bg-secondary/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-2.5 mb-6">
-              <span className="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-display-xl font-extrabold text-lg">
+              <span className="w-9 h-9 rounded-lg bg-secondary text-on-secondary border-2 border-on-ink flex items-center justify-center font-display-xl font-extrabold text-lg">
                 M
               </span>
               <span className="font-display-xl text-xl font-extrabold text-on-ink">MMC</span>
@@ -95,7 +95,7 @@ const Footer = () => {
                 type="email"
               />
               <button
-                className="bg-secondary p-2.5 rounded-lg text-on-secondary hover:brightness-110 transition-colors"
+                className="btn-pop-light bg-secondary p-2.5 rounded-lg text-on-secondary"
                 type="submit"
               >
                 <span className="material-symbols-outlined">send</span>

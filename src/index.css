@@ -7,13 +7,13 @@
       scroll-behavior: smooth;
   }
   body {
-      background-color: #F6F8F9;
-      color: #0E1217;
+      background-color: #FBF5EC;
+      color: #1A1611;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
   }
   ::selection {
-      background-color: #0D9488;
+      background-color: #E11D74;
       color: #FFFFFF;
   }
 }
@@ -25,17 +25,17 @@
 
   /* Light translucent panel (used on dark ink hero) */
   .glass-panel {
-      background: rgba(12, 17, 22, 0.55);
+      background: rgba(22, 19, 15, 0.55);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.12);
   }
   .technical-stroke {
-      border: 1px solid #DCE3E5;
+      border: 1px solid #E2D6C3;
   }
   .scrubber-thumb {
       width: 2px;
       height: 100%;
-      background-color: #14B8A6;
+      background-color: #E11D74;
       position: absolute;
       left: 45%;
   }
@@ -50,16 +50,16 @@
       border: 1px solid rgba(14, 18, 23, 0.08);
   }
   .studio-border {
-      border: 1px solid rgba(14, 18, 23, 0.10);
+      border: 1px solid rgba(26, 22, 17, 0.12);
   }
   .studio-card:hover .studio-border {
-      border-color: rgba(13, 148, 136, 0.5);
+      border-color: rgba(225, 29, 116, 0.6);
   }
 
   /* Dark ink cards (inside spotlight sections) */
   .ink-card {
-      background-color: #131C22;
-      border: 1px solid #2A363D;
+      background-color: #1E1A14;
+      border: 1px solid #3A3327;
   }
 
   /* Glows & highlights */
@@ -67,30 +67,142 @@
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
   }
   .accent-glow {
-      box-shadow: 0 10px 30px -10px rgba(13, 148, 136, 0.45);
+      box-shadow: 0 12px 32px -12px rgba(225, 29, 116, 0.55);
   }
   .soft-shadow {
-      box-shadow: 0 1px 2px rgba(14, 18, 23, 0.04), 0 8px 24px -12px rgba(14, 18, 23, 0.12);
+      box-shadow: 0 1px 2px rgba(26, 22, 17, 0.04), 0 10px 28px -14px rgba(26, 22, 17, 0.18);
   }
   .pink-glow {
-      text-shadow: 0 0 10px rgba(20, 184, 166, 0.4);
+      text-shadow: 0 0 10px rgba(225, 29, 116, 0.4);
   }
   .glow-secondary:focus {
-      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.18);
-      border-color: #0D9488;
+      box-shadow: 0 0 0 3px rgba(225, 29, 116, 0.20);
+      border-color: #E11D74;
+  }
+
+  /* ===== Expressive Studio utilities ===== */
+  /* Hard offset shadow + bold ink border = neo-brutalist studio card */
+  .pop-card {
+      border: 2px solid #16130F;
+      box-shadow: 5px 5px 0 0 #16130F;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .pop-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0 0 #16130F;
+  }
+  /* Expressive primary button: solid coral with hard ink shadow */
+  .btn-pop {
+      border: 2px solid #16130F;
+      box-shadow: 4px 4px 0 0 #16130F;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .btn-pop:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 0 #16130F;
+  }
+  .btn-pop:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0 0 #16130F;
+  }
+  /* On dark sections, hard shadow should be cream so it reads */
+  .btn-pop-light {
+      border: 2px solid #FBF5EC;
+      box-shadow: 4px 4px 0 0 #FBF5EC;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .btn-pop-light:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 0 #FBF5EC;
+  }
+  .btn-pop-light:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0 0 #FBF5EC;
+  }
+  /* Rotated sticker tag */
+  .sticker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: 2px solid #16130F;
+      box-shadow: 3px 3px 0 0 #16130F;
+      transform: rotate(-3deg);
+  }
+  /* Eyebrow pill label */
+  .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.8rem;
+      border: 2px solid #16130F;
+      border-radius: 9999px;
+      background: #FBD0E4;
+      color: #16130F;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+  }
+  .eyebrow-pill.on-dark {
+      background: transparent;
+      border-color: #E11D74;
+      color: #E11D74;
+  }
+  /* Outlined display text (expressive headline accent) */
+  .text-outline-ink {
+      color: transparent;
+      -webkit-text-stroke: 2px #16130F;
+      text-stroke: 2px #16130F;
+  }
+  .text-outline-cream {
+      color: transparent;
+      -webkit-text-stroke: 2px #FBF5EC;
+      text-stroke: 2px #FBF5EC;
+  }
+  /* Subtle paper grain overlay for warmth */
+  .grain::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.5;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  /* Marquee band (bold scrolling strip) */
+  .marquee-band {
+      overflow: hidden;
+      white-space: nowrap;
+  }
+  .marquee-band-track {
+      display: inline-flex;
+      align-items: center;
+      animation: marquee 24s linear infinite;
+  }
+  .marquee-band:hover .marquee-band-track {
+      animation-play-state: paused;
+  }
+  /* Recruiters marquee (was undefined) */
+  .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 32s linear infinite;
+  }
+  .marquee-track:hover {
+      animation-play-state: paused;
   }
 
   /* Technical grid backgrounds (light) */
   .vfx-grid-pattern {
       background-image:
-          linear-gradient(rgba(14, 18, 23, 0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(14, 18, 23, 0.04) 1px, transparent 1px);
+          linear-gradient(rgba(26, 22, 17, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(26, 22, 17, 0.05) 1px, transparent 1px);
       background-size: 44px 44px;
   }
   .grid-overlay {
       background-image:
-          linear-gradient(rgba(14, 18, 23, 0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(14, 18, 23, 0.05) 1px, transparent 1px);
+          linear-gradient(rgba(26, 22, 17, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(26, 22, 17, 0.05) 1px, transparent 1px);
       background-size: 44px 44px;
   }
   /* Grid on dark ink sections */
@@ -101,26 +213,26 @@
       background-size: 44px 44px;
   }
   .nle-divider {
-      border-color: #DCE3E5;
+      border-color: #E2D6C3;
   }
 
   /* Form focus glow */
   .studio-glow:focus {
       outline: none;
-      border-color: #0D9488;
-      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.18);
+      border-color: #E11D74;
+      box-shadow: 0 0 0 3px rgba(225, 29, 116, 0.20);
   }
 
   /* Timeline scrubber */
   .timeline-scrubber {
       height: 2px;
-      background: #DCE3E5;
+      background: #E2D6C3;
       position: relative;
   }
   .timeline-playhead {
       width: 2px;
       height: 12px;
-      background: #0D9488;
+      background: #E11D74;
       position: absolute;
       top: -5px;
       left: 35%;
@@ -130,7 +242,7 @@
   .scanline {
       width: 100%;
       height: 2px;
-      background: linear-gradient(to right, transparent, #14B8A6, transparent);
+      background: linear-gradient(to right, transparent, #E11D74, transparent);
       opacity: 0.4;
       position: absolute;
       top: 0;
@@ -149,7 +261,7 @@
       width: 4px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #DCE3E5;
+      background: #E2D6C3;
       border-radius: 9999px;
   }
 }

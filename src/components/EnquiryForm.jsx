@@ -10,7 +10,7 @@ const EnquiryForm = ({ compact = false }) => {
   };
 
   const inputClass =
-    'w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-on-surface placeholder:text-on-surface-variant focus:ring-0 studio-glow transition-all';
+    'w-full bg-surface border-2 border-ink rounded-lg px-4 py-3 font-body-md text-on-surface placeholder:text-on-surface-variant focus:ring-0 studio-glow transition-all';
 
   if (submitted) {
     return (
@@ -52,7 +52,7 @@ const EnquiryForm = ({ compact = false }) => {
       </p>
       <button
         type="submit"
-        className="w-full bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all active:scale-[0.99]"
+        className="btn-pop w-full bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-bold rounded-lg"
       >
         Submit Enquiry
       </button>

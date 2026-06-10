@@ -41,14 +41,14 @@ const Navbar = () => {
       : 'font-body-md text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors duration-200';
 
   return (
-    <nav ref={navRef} className="w-full sticky top-0 z-[100] border-b border-outline-variant bg-surface/85 backdrop-blur-xl">
+    <nav ref={navRef} className="w-full sticky top-0 z-[100] border-b-2 border-ink bg-surface/90 backdrop-blur-xl">
       <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16">
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
           className="nav-animate flex items-center gap-2.5"
         >
-          <span className="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-display-xl font-extrabold text-lg tracking-tighter">
+          <span className="w-9 h-9 rounded-lg bg-secondary text-on-secondary border-2 border-ink shadow-hard-sm flex items-center justify-center font-display-xl font-extrabold text-lg tracking-tighter">
             M
           </span>
           <span className="flex flex-col leading-none">
@@ -72,7 +72,7 @@ const Navbar = () => {
             </button>
             {coursesOpen && (
               <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[440px]">
-                <div className="bg-surface border border-outline-variant rounded-xl p-3 grid grid-cols-1 gap-1 soft-shadow">
+                <div className="bg-surface border-2 border-ink rounded-xl p-3 grid grid-cols-1 gap-1 shadow-hard">
                   {COURSES.map((c) => (
                     <Link
                       key={c.slug}
@@ -110,7 +110,7 @@ const Navbar = () => {
 
         <div className="nav-animate flex items-center gap-4">
           <Link to="/mmc-begin-your-professional-journey" className="hidden sm:block">
-            <button className="bg-secondary text-on-secondary px-6 py-2.5 font-body-md text-sm font-semibold rounded-lg hover:bg-on-secondary-fixed hover:brightness-110 transition-all duration-150 accent-glow">
+            <button className="btn-pop bg-secondary text-on-secondary px-6 py-2.5 font-body-md text-sm font-bold rounded-lg">
               Enquire Now
             </button>
           </Link>
@@ -168,7 +168,7 @@ const Navbar = () => {
             )}
           </div>
           <Link to="/mmc-begin-your-professional-journey" onClick={() => setMobileOpen(false)}>
-            <button className="w-full bg-secondary text-on-secondary px-6 py-3 font-body-md text-sm font-semibold rounded-lg">
+            <button className="w-full btn-pop bg-secondary text-on-secondary px-6 py-3 font-body-md text-sm font-bold rounded-lg">
               Enquire Now
             </button>
           </Link>

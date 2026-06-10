@@ -6,7 +6,7 @@ const FaqSection = ({ items, id = 'faq' }) => {
   return (
     <section id={id} className="py-24 px-margin-mobile md:px-margin-desktop bg-background scroll-mt-16">
       <div className="reveal-head mb-12 max-w-3xl">
-        <span className="font-label-technical text-label-technical text-secondary tracking-widest mb-4 block uppercase">
+        <span className="eyebrow-pill mb-5">
           FAQ
         </span>
         <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg">
@@ -19,7 +19,7 @@ const FaqSection = ({ items, id = 'faq' }) => {
           return (
             <div
               key={item.q}
-              className="bg-surface border border-outline-variant rounded-xl overflow-hidden soft-shadow"
+              className="bg-surface border-2 border-ink rounded-xl overflow-hidden shadow-hard-sm"
             >
               <button
                 type="button"

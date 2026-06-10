@@ -75,28 +75,28 @@ const CourseTemplate = ({ course }) => {
         <div className="absolute inset-0 ink-grid-pattern opacity-50" />
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] pointer-events-none" />
         <div className="relative z-10 max-w-4xl">
-          <div className="ct-badge inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/5 rounded-full border border-white/10">
-            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-            <span className="font-label-technical text-label-technical text-secondary uppercase">
+          <div className="ct-badge sticker bg-tertiary text-on-tertiary mb-6 px-4 py-2 rounded-full">
+            <span className="w-2 h-2 rounded-full bg-on-tertiary animate-pulse" />
+            <span className="font-label-technical text-[11px] font-bold uppercase tracking-widest">
               {course.eyebrow}
             </span>
           </div>
-          <h1 className="ct-title font-display-xl text-headline-lg-mobile md:text-display-xl text-on-ink mb-6 leading-[1.05]">
+          <h1 className="ct-title font-display-xl text-headline-lg-mobile md:text-display-xl text-on-ink mb-6 leading-[1.0]">
             {course.title} <span className="text-secondary">{course.titleAccent}</span>
           </h1>
           <p className="ct-sub font-body-lg text-body-lg text-on-ink-variant max-w-2xl mb-10">
             {course.intro}
           </p>
-          <div className="ct-cta flex flex-wrap gap-4">
+          <div className="ct-cta flex flex-wrap gap-5">
             <Link
               to="/mmc-begin-your-professional-journey"
-              className="bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all"
+              className="btn-pop-light bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-bold rounded-lg"
             >
               Enroll for Next Intake
             </Link>
             <a
               href="#curriculum"
-              className="border border-white/15 text-on-ink px-8 py-4 font-body-md text-sm font-semibold rounded-lg hover:bg-white/5 transition-colors"
+              className="border-2 border-on-ink/30 text-on-ink px-8 py-4 font-body-md text-sm font-bold rounded-lg hover:border-tertiary hover:text-tertiary transition-colors"
             >
               View Curriculum
             </a>
@@ -111,11 +111,11 @@ const CourseTemplate = ({ course }) => {
       >
         <div className="ct-fade mb-16">
           <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg mb-4">Core Curriculum</h2>
-          <div className="h-1 w-24 bg-secondary rounded-full" />
+          <div className="h-1.5 w-24 bg-secondary rounded-full border-2 border-ink" />
         </div>
         <div className="ct-modules grid grid-cols-1 md:grid-cols-3 gap-gutter">
           {course.modules.map((m) => (
-            <div key={m.no} className="bg-surface border border-outline-variant rounded-2xl p-8 hover:-translate-y-1 hover:soft-shadow hover:border-secondary/40 transition-all duration-300 group">
+            <div key={m.no} className="bg-surface pop-card rounded-2xl p-8 group">
               <div className="flex justify-between items-start mb-12">
                 <span className="font-label-technical text-label-technical text-on-surface-variant">
                   MODULE {m.no}
@@ -150,7 +150,7 @@ const CourseTemplate = ({ course }) => {
           <div className="ct-tools flex flex-wrap justify-center items-center gap-16">
             {course.tools.map((t) => (
               <div key={t.name} className="flex flex-col items-center gap-3">
-                <div className="w-16 h-16 rounded-xl bg-surface flex items-center justify-center border border-outline-variant soft-shadow">
+                <div className="w-16 h-16 rounded-xl bg-surface flex items-center justify-center border-2 border-ink shadow-hard-sm">
                   <span className={`font-bold text-2xl ${t.color}`}>{t.abbr}</span>
                 </div>
                 <span className="font-label-technical text-label-technical text-on-surface-variant">{t.name}</span>
@@ -163,9 +163,9 @@ const CourseTemplate = ({ course }) => {
       {/* CTA (dark spotlight) */}
       <section className="px-margin-mobile md:px-margin-desktop py-24 bg-background">
         <div className="ct-fade grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="md:col-span-3 bg-ink text-on-ink p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden">
+          <div className="md:col-span-3 bg-ink text-on-ink p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden grain border-2 border-ink shadow-hard-coral">
             <div className="absolute inset-0 ink-grid-pattern opacity-40" />
-            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary/20 rounded-full blur-[100px]" />
+            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary/25 rounded-full blur-[100px]" />
             <div className="relative z-10">
               <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-ink mb-4">
                 Start your {course.titleAccent.toLowerCase()} journey.
@@ -176,13 +176,13 @@ const CourseTemplate = ({ course }) => {
               </p>
               <Link
                 to="/mmc-begin-your-professional-journey"
-                className="inline-block bg-secondary text-on-secondary px-10 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all active:scale-95"
+                className="btn-pop-light inline-block bg-secondary text-on-secondary px-10 py-4 font-body-md text-sm font-bold rounded-lg"
               >
                 Enroll for Next Intake
               </Link>
             </div>
           </div>
-          <div className="md:col-span-1 bg-surface border border-outline-variant p-8 rounded-3xl flex flex-col items-center justify-center text-center soft-shadow">
+          <div className="md:col-span-1 bg-surface pop-card p-8 rounded-3xl flex flex-col items-center justify-center text-center">
             <span className="material-symbols-outlined text-4xl text-secondary mb-4">event_available</span>
             <span className="font-label-technical text-label-technical text-on-surface-variant mb-1">NEXT START</span>
             <span className="font-display-xl text-title-md text-on-surface">Rolling Intake</span>

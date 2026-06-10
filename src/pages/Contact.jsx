@@ -5,10 +5,11 @@ import { CENTRES, SITE_CONTACT } from '../data/site';
 
 const Contact = () => (
   <>
-    <section className="relative bg-ink text-on-ink py-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
+    <section className="relative bg-ink text-on-ink py-24 px-margin-mobile md:px-margin-desktop overflow-hidden grain">
       <div className="absolute inset-0 ink-grid-pattern opacity-40" />
+      <div className="absolute -top-20 right-1/4 w-96 h-72 bg-secondary/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="relative z-10 max-w-3xl">
-        <span className="font-label-technical text-label-technical text-secondary tracking-widest mb-4 block uppercase">
+        <span className="eyebrow-pill on-dark mb-5">
           Contact Us
         </span>
         <h1 className="font-display-xl text-headline-lg-mobile md:text-display-xl text-on-ink mb-6">
@@ -54,7 +55,7 @@ const Contact = () => (
               {CENTRES.map((c) => (
                 <div
                   key={c.city}
-                  className="bg-surface border border-outline-variant rounded-lg px-4 py-3 text-sm"
+                  className="bg-surface border-2 border-ink rounded-lg px-4 py-3 text-sm shadow-hard-sm"
                 >
                   <span className="font-semibold text-on-surface">{c.city}</span>
                   <span className="text-on-surface-variant"> · {c.state}</span>
@@ -67,14 +68,14 @@ const Contact = () => (
             href={`https://wa.me/${SITE_CONTACT.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-body-md text-sm font-semibold hover:brightness-110 transition-all"
+            className="btn-pop inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-body-md text-sm font-bold"
           >
             <span className="material-symbols-outlined">chat</span>
             Chat on WhatsApp
           </a>
         </div>
 
-        <div className="bg-surface border border-outline-variant rounded-2xl p-8 soft-shadow h-fit">
+        <div className="bg-surface pop-card rounded-2xl p-8 h-fit">
           <h2 className="font-title-md text-title-md mb-6">Send an enquiry</h2>
           <EnquiryForm />
         </div>

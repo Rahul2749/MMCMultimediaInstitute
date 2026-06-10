@@ -8,14 +8,14 @@ const FloatingCta = () => (
       href={`https://wa.me/${SITE_CONTACT.whatsapp}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center soft-shadow hover:scale-105 transition-transform"
+      className="w-12 h-12 rounded-full bg-[#25D366] text-white border-2 border-ink shadow-hard-sm flex items-center justify-center hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform"
       aria-label="Chat on WhatsApp"
     >
       <span className="material-symbols-outlined">chat</span>
     </a>
     <Link
       to="/mmc-begin-your-professional-journey"
-      className="hidden sm:flex items-center gap-2 bg-secondary text-on-secondary px-5 py-3 rounded-full font-body-md text-sm font-semibold accent-glow hover:brightness-110 transition-all"
+      className="btn-pop hidden sm:flex items-center gap-2 bg-secondary text-on-secondary px-5 py-3 rounded-full font-body-md text-sm font-bold"
     >
       Enquire Now
       <span className="material-symbols-outlined text-lg">arrow_forward</span>

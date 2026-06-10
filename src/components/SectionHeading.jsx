@@ -10,7 +10,7 @@ const SectionHeading = ({
 }) => (
   <div className={`reveal-head max-w-3xl ${className}`}>
     {eyebrow && (
-      <span className="font-label-technical text-label-technical text-secondary tracking-widest mb-4 block uppercase">
+      <span className={`eyebrow-pill mb-5 ${dark ? 'on-dark' : ''}`}>
         {eyebrow}
       </span>
     )}

@@ -25,10 +25,10 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const badgeColor = {
-  purple: 'bg-purple-600 text-white',
+  purple: 'bg-tertiary text-on-tertiary',
   tertiary: 'bg-tertiary text-on-tertiary',
   secondary: 'bg-secondary text-on-secondary',
-  'on-surface': 'bg-on-surface text-surface',
+  'on-surface': 'bg-ink text-on-ink',
 };
 
 const STAGGER_GRIDS =
@@ -41,12 +41,12 @@ const parseStat = (value) => {
 
 const SpotlightCta = ({ eyebrow, title, highlight, desc, ctaLabel, ctaTo = '/mmc-begin-your-professional-journey', ctaHash }) => (
   <section className="px-margin-mobile md:px-margin-desktop py-16 bg-background">
-    <div className="fade-up relative bg-ink text-on-ink rounded-3xl p-10 md:p-14 overflow-hidden">
+    <div className="fade-up relative bg-ink text-on-ink rounded-3xl p-10 md:p-14 overflow-hidden grain border-2 border-ink shadow-hard-coral">
       <div className="absolute inset-0 ink-grid-pattern opacity-40" />
-      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-72 h-72 bg-secondary/20 rounded-full blur-[100px]" />
+      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-72 h-72 bg-secondary/25 rounded-full blur-[100px]" />
       <div className="relative z-10 max-w-2xl">
         {eyebrow && (
-          <span className="font-label-technical text-label-technical text-secondary tracking-widest mb-4 block uppercase">
+          <span className="eyebrow-pill on-dark mb-5">
             {eyebrow}
           </span>
         )}
@@ -57,7 +57,7 @@ const SpotlightCta = ({ eyebrow, title, highlight, desc, ctaLabel, ctaTo = '/mmc
         {ctaHash ? (
           <a
             href={ctaHash}
-            className="inline-flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all"
+            className="btn-pop-light inline-flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-bold rounded-lg"
           >
             {ctaLabel}
             <span className="material-symbols-outlined text-lg">arrow_forward</span>
@@ -65,7 +65,7 @@ const SpotlightCta = ({ eyebrow, title, highlight, desc, ctaLabel, ctaTo = '/mmc
         ) : (
           <Link
             to={ctaTo}
-            className="inline-flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all"
+            className="btn-pop-light inline-flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-bold rounded-lg"
           >
             {ctaLabel}
             <span className="material-symbols-outlined text-lg">arrow_forward</span>
@@ -168,81 +168,103 @@ const Home = () => {
   return (
     <div ref={root}>
       {/* Hero */}
-      <section className="relative bg-ink text-on-ink overflow-hidden">
-        <div className="absolute inset-0 ink-grid-pattern opacity-60" />
-        <div className="absolute -top-40 -right-32 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-[120px] pointer-events-none" />
+      <section className="relative bg-ink text-on-ink overflow-hidden grain">
+        <div className="absolute inset-0 ink-grid-pattern opacity-50" />
+        <div className="absolute -top-40 -right-32 w-[600px] h-[600px] bg-secondary/25 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute -bottom-40 -left-24 w-[520px] h-[520px] bg-tertiary/15 rounded-full blur-[120px] pointer-events-none" />
         <div className="relative z-10 px-margin-mobile md:px-margin-desktop pt-24 pb-32 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 max-w-2xl">
-            <div className="hero-badge inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full mb-8">
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              <span className="font-label-technical text-[10px] uppercase tracking-widest text-on-ink-variant">
+            <div className="hero-badge sticker bg-tertiary text-on-tertiary px-4 py-2 rounded-full mb-8">
+              <span className="w-2 h-2 rounded-full bg-on-tertiary animate-pulse" />
+              <span className="font-label-technical text-[11px] uppercase tracking-widest font-bold">
                 Career-Focused AVGC-XR Training
               </span>
             </div>
-            <h1 className="hero-title font-display-xl text-headline-lg-mobile md:text-display-xl text-on-ink mb-6 leading-[1.02]">
-              Turn Your Creative Passion Into a <span className="text-secondary">Thriving Career</span>
+            <h1 className="hero-title font-display-xl text-headline-lg-mobile md:text-display-xl text-on-ink mb-6 leading-[0.98]">
+              Turn your <span className="text-outline-cream">creative</span> passion into a{' '}
+              <span className="text-secondary">thriving career.</span>
             </h1>
             <p className="hero-sub font-body-lg text-body-lg text-on-ink-variant mb-10">
               MMC Multimedia Institute trains the next generation of animators, VFX artists, designers
               and filmmakers — with industry-grade tools, expert mentors and real placement support.
             </p>
-            <div className="hero-cta flex flex-wrap gap-4">
+            <div className="hero-cta flex flex-wrap gap-5">
               <a
                 href="#courses"
-                className="bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all flex items-center gap-2"
+                className="btn-pop-light bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-bold rounded-lg flex items-center gap-2"
               >
                 Explore Courses
                 <span className="material-symbols-outlined text-lg">arrow_forward</span>
               </a>
               <a
                 href="#enquiry"
-                className="border border-white/15 text-on-ink px-8 py-4 font-body-md text-sm font-semibold rounded-lg hover:bg-white/5 transition-all"
+                className="px-8 py-4 font-body-md text-sm font-bold rounded-lg border-2 border-on-ink/30 text-on-ink hover:border-tertiary hover:text-tertiary transition-all"
               >
                 Book a Call
               </a>
             </div>
           </div>
           <div className="hero-panel hidden lg:block lg:col-span-5">
-            <div className="glass-panel p-6 rounded-2xl space-y-6">
-              <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                <span className="font-label-technical text-label-technical text-secondary">ACTIVE_TIMELINE</span>
-                <span className="material-symbols-outlined text-on-ink-variant">tune</span>
+            <div className="relative rounded-2xl overflow-hidden border-2 border-secondary bg-ink-soft shadow-hard-coral">
+              <div className="relative h-56 bg-gradient-to-br from-secondary/30 via-ink-soft to-tertiary/20 flex items-center justify-center">
+                <div className="absolute inset-0 ink-grid-pattern opacity-30" />
+                <button type="button" aria-label="Play showreel" className="relative w-20 h-20 rounded-full bg-secondary text-on-secondary border-2 border-on-ink flex items-center justify-center shadow-hard-cream hover:scale-105 transition-transform">
+                  <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
+                </button>
+                <span className="absolute top-4 left-4 sticker bg-on-ink text-ink px-3 py-1 rounded font-label-technical text-[10px] font-bold uppercase tracking-widest">Student Reel '26</span>
               </div>
-              <div className="h-32 bg-black/40 rounded-lg border border-white/10 relative overflow-hidden">
-                <div className="scrubber-thumb" style={{ left: '45%' }} />
-                <div className="absolute bottom-4 left-4 right-4 h-1 bg-white/10 rounded-full overflow-hidden">
-                  <div className="h-full bg-secondary w-1/2" />
+              <div className="p-5 space-y-4 border-t-2 border-secondary">
+                <div className="flex justify-between items-center">
+                  <span className="font-label-technical text-label-technical text-secondary font-bold">ACTIVE_TIMELINE</span>
+                  <span className="material-symbols-outlined text-on-ink-variant">tune</span>
                 </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                  <div className="text-[10px] font-label-technical text-on-ink-variant mb-1">FPS</div>
-                  <div className="font-label-technical text-on-ink">23.976</div>
-                </div>
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                  <div className="text-[10px] font-label-technical text-on-ink-variant mb-1">CODEC</div>
-                  <div className="font-label-technical text-on-ink">ProRes 4444</div>
+                <div className="timeline-scrubber"><div className="timeline-playhead" /></div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3 bg-white/5 rounded-lg border border-ink-outline">
+                    <div className="text-[10px] font-label-technical text-on-ink-variant mb-1">FPS</div>
+                    <div className="font-label-technical text-on-ink font-bold">23.976</div>
+                  </div>
+                  <div className="p-3 bg-white/5 rounded-lg border border-ink-outline">
+                    <div className="text-[10px] font-label-technical text-on-ink-variant mb-1">CODEC</div>
+                    <div className="font-label-technical text-on-ink font-bold">ProRes 4444</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="relative z-10 px-margin-mobile md:px-margin-desktop -mb-16 translate-y-16">
-          <div className="stats-row grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant rounded-2xl overflow-hidden border border-outline-variant soft-shadow">
+          <div className="stats-row grid grid-cols-2 lg:grid-cols-4 gap-px bg-ink rounded-2xl overflow-hidden border-2 border-ink shadow-hard">
             {STATS.map((s) => {
               const { num, suffix } = parseStat(s.value);
               return (
                 <div key={s.label} className="bg-surface px-6 py-8 text-center">
-                  <div className="stat-num font-display-xl text-headline-lg-mobile text-secondary mb-1" data-value={num} data-suffix={suffix}>
+                  <div className="stat-num font-display-xl text-headline-lg-mobile text-secondary mb-1 tabular-nums" data-value={num} data-suffix={suffix}>
                     {s.value}
                   </div>
-                  <div className="font-label-technical text-[10px] text-on-surface-variant uppercase tracking-widest">{s.label}</div>
+                  <div className="font-label-technical text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">{s.label}</div>
                 </div>
               );
             })}
           </div>
         </div>
       </section>
+
+      {/* Marquee band */}
+      <div className="marquee-band bg-secondary border-y-2 border-ink py-3 select-none">
+        <div className="marquee-band-track">
+          {Array.from({ length: 2 }).map((_, k) => (
+            <React.Fragment key={k}>
+              {['Animation', 'VFX', 'Game Design', 'Graphic Design', 'Film Making', 'Broadcast', '3D', 'Motion'].map((word) => (
+                <span key={`${k}-${word}`} className="inline-flex items-center font-display-xl text-on-secondary text-xl font-bold uppercase tracking-tight">
+                  <span className="px-6">{word}</span>
+                  <span className="material-symbols-outlined text-on-secondary/70" style={{ fontVariationSettings: "'FILL' 1" }}>asterisk</span>
+                </span>
+              ))}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
 
       {/* Why MMC */}
       <section id="why-mmc" className="pt-40 pb-24 px-margin-mobile md:px-margin-desktop bg-background scroll-mt-16">
@@ -255,7 +277,7 @@ const Home = () => {
         />
         <div className="why-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
           {WHY_CHOOSE.map((w) => (
-            <div key={w.title} className="bg-surface border border-outline-variant rounded-xl p-8 hover:-translate-y-1 hover:soft-shadow hover:border-secondary/40 transition-all duration-300 group">
+            <div key={w.title} className="bg-surface pop-card rounded-xl p-8 group">
               <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors">
                 <span className="material-symbols-outlined text-secondary group-hover:text-on-secondary" style={{ fontVariationSettings: "'FILL' 1" }}>{w.icon}</span>
               </div>
@@ -277,7 +299,7 @@ const Home = () => {
               description="Tell us about yourself — our admissions team will guide you through courses, batches and financing options."
             />
           </div>
-          <div className="fade-up bg-surface border border-outline-variant rounded-2xl p-8 soft-shadow">
+          <div className="fade-up bg-surface pop-card rounded-2xl p-8">
             <EnquiryForm compact />
           </div>
         </div>
@@ -287,13 +309,13 @@ const Home = () => {
       <section id="courses" className="py-24 px-margin-mobile md:px-margin-desktop bg-background scroll-mt-16">
         <div className="reveal-head flex flex-wrap items-end justify-between gap-6 mb-16">
           <SectionHeading eyebrow="Our Courses" title="Industry-aligned programs for" highlight="future-ready careers" />
-          <Link to="/mmc-3d-animation-curriculum" className="font-body-md text-sm font-semibold text-on-surface border border-outline-variant bg-surface rounded-lg px-6 py-3 hover:border-secondary hover:text-secondary transition-colors flex items-center gap-2">
+          <Link to="/mmc-3d-animation-curriculum" className="font-body-md text-sm font-bold text-on-surface border-2 border-ink bg-surface rounded-lg px-6 py-3 shadow-hard-sm hover:shadow-hard hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex items-center gap-2">
             View All <span className="material-symbols-outlined text-base">arrow_forward</span>
           </Link>
         </div>
         <div className="courses-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
           {COURSES.map((c) => (
-            <Link key={c.slug} to={c.slug} className="group bg-surface border border-outline-variant rounded-2xl overflow-hidden hover:-translate-y-1 hover:soft-shadow hover:border-secondary/40 transition-all duration-300 flex flex-col">
+            <Link key={c.slug} to={c.slug} className="group bg-surface pop-card rounded-2xl overflow-hidden flex flex-col">
               <div className="relative h-44 overflow-hidden bg-surface-container-high">
                 {c.image ? (
                   <img src={c.image} alt={c.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -328,7 +350,7 @@ const Home = () => {
         />
         <div className="partners-grid flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
           {TRAINING_PARTNERS.map((p) => (
-            <div key={p.name} className="flex flex-col items-center gap-2 px-6 py-4 bg-surface border border-outline-variant rounded-xl min-w-[120px] hover:border-secondary/40 transition-colors">
+            <div key={p.name} className="flex flex-col items-center gap-2 px-6 py-4 bg-surface pop-card rounded-xl min-w-[120px]">
               <span className="font-display-xl text-xl font-bold text-secondary">{p.abbr}</span>
               <span className="font-label-technical text-[10px] text-on-surface-variant uppercase tracking-widest">{p.name}</span>
             </div>
@@ -347,7 +369,7 @@ const Home = () => {
         />
         <div className="marquee-track">
           {[...RECRUITERS, ...RECRUITERS].map((r, i) => (
-            <div key={i} className="flex-shrink-0 mx-3 px-8 py-5 bg-surface border border-outline-variant rounded-xl font-display-xl text-lg font-bold text-on-surface-variant whitespace-nowrap hover:text-secondary hover:border-secondary/40 transition-all">
+            <div key={i} className="flex-shrink-0 mx-3 px-8 py-5 bg-surface border-2 border-ink rounded-xl font-display-xl text-lg font-bold text-on-surface whitespace-nowrap shadow-hard-sm hover:text-secondary transition-colors">
               {r}
             </div>
           ))}
@@ -367,17 +389,18 @@ const Home = () => {
       <section id="student-work" className="py-24 px-margin-mobile md:px-margin-desktop bg-background scroll-mt-16">
         <div className="reveal-head flex flex-wrap items-end justify-between gap-6 mb-16">
           <SectionHeading eyebrow="Student Work" title="Made at" highlight="MMC" description="Explore the creative brilliance of our students — projects that blend imagination and industry expertise." />
-          <Link to="/mmc-student-work-gallery" className="font-body-md text-sm font-semibold text-on-surface border border-outline-variant bg-surface rounded-lg px-6 py-3 hover:border-secondary hover:text-secondary transition-colors flex items-center gap-2">
+          <Link to="/mmc-student-work-gallery" className="font-body-md text-sm font-bold text-on-surface border-2 border-ink bg-surface rounded-lg px-6 py-3 shadow-hard-sm hover:shadow-hard hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex items-center gap-2">
             View Gallery <span className="material-symbols-outlined text-base">arrow_forward</span>
           </Link>
         </div>
         <div className="work-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
           {STUDENT_WORK.map((w) => (
-            <Link key={w.title} to="/mmc-student-work-gallery" className="group relative aspect-[4/5] rounded-2xl overflow-hidden border border-outline-variant hover:border-secondary/40 transition-all">
-              <img src={w.image} alt={w.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
+            <Link key={w.title} to="/mmc-student-work-gallery" className="group relative aspect-[4/5] rounded-2xl overflow-hidden border-2 border-ink shadow-hard-sm hover:shadow-hard hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all">
+              <img src={w.image} alt={w.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+              <span className="absolute top-3 left-3 sticker bg-secondary text-on-secondary px-2.5 py-1 rounded font-label-technical text-[9px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">{w.category}</span>
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="font-label-technical text-[10px] text-secondary uppercase tracking-widest">{w.category}</span>
+                <span className="font-label-technical text-[10px] text-tertiary uppercase tracking-widest font-bold">{w.category}</span>
                 <h3 className="font-title-md text-base text-on-ink mt-1">{w.title}</h3>
               </div>
             </Link>
@@ -410,13 +433,13 @@ const Home = () => {
       <section id="faculty" className="py-24 px-margin-mobile md:px-margin-desktop bg-background scroll-mt-16">
         <div className="reveal-head flex flex-wrap items-end justify-between gap-6 mb-16">
           <SectionHeading eyebrow="Expert Faculty" title="Learn from" highlight="industry mentors" description="Award-winning supervisors, lead animators and senior editors actively shaping global entertainment." />
-          <Link to="/mmc-faculty-mentors" className="font-body-md text-sm font-semibold text-on-surface border border-outline-variant bg-surface rounded-lg px-6 py-3 hover:border-secondary hover:text-secondary transition-colors flex items-center gap-2">
+          <Link to="/mmc-faculty-mentors" className="font-body-md text-sm font-bold text-on-surface border-2 border-ink bg-surface rounded-lg px-6 py-3 shadow-hard-sm hover:shadow-hard hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all flex items-center gap-2">
             Meet Faculty <span className="material-symbols-outlined text-base">arrow_forward</span>
           </Link>
         </div>
         <div className="faculty-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
           {FACULTY_PREVIEW.map((f) => (
-            <Link key={f.name} to={f.slug} className="group bg-surface border border-outline-variant rounded-2xl overflow-hidden hover:-translate-y-1 hover:soft-shadow hover:border-secondary/40 transition-all duration-300">
+            <Link key={f.name} to={f.slug} className="group bg-surface pop-card rounded-2xl overflow-hidden">
               <div className="aspect-[3/4] overflow-hidden bg-surface-container-high">
                 <img src={f.image} alt={f.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
               </div>
@@ -449,7 +472,7 @@ const Home = () => {
         <SectionHeading eyebrow="Recruiter Testimonials" title="Trusted by the" highlight="industry" className="mb-16" />
         <div className="tg-grid grid grid-cols-1 md:grid-cols-3 gap-gutter">
           {TESTIMONIALS.map((t) => (
-            <div key={t.name} className="bg-surface border border-outline-variant rounded-xl p-8 flex flex-col soft-shadow">
+            <div key={t.name} className="bg-surface pop-card rounded-xl p-8 flex flex-col">
               <span className="material-symbols-outlined text-secondary text-4xl mb-6">format_quote</span>
               <p className="text-on-surface font-body-lg mb-8 flex-grow">{t.quote}</p>
               <div className="border-t border-outline-variant pt-4">
@@ -466,7 +489,7 @@ const Home = () => {
         <SectionHeading eyebrow="Student Testimonials" title="Hear from our" highlight="graduates" description="Students from across India share how MMC training empowered their creative careers." className="mb-16" />
         <div className="st-grid grid grid-cols-1 md:grid-cols-3 gap-gutter">
           {STUDENT_TESTIMONIALS.map((t) => (
-            <div key={t.name} className="bg-surface border border-outline-variant rounded-xl p-8 soft-shadow">
+            <div key={t.name} className="bg-surface pop-card rounded-xl p-8">
               <span className="material-symbols-outlined text-secondary text-3xl mb-4">school</span>
               <p className="text-on-surface font-body-md mb-6">{t.quote}</p>
               <div className="border-t border-outline-variant pt-4">
@@ -489,7 +512,7 @@ const Home = () => {
         />
         <div className="campus-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
           {CAMPUS_FACILITIES.map((c) => (
-            <div key={c.title} className="bg-surface border border-outline-variant rounded-xl p-8 hover:-translate-y-1 hover:soft-shadow hover:border-secondary/40 transition-all duration-300">
+            <div key={c.title} className="bg-surface pop-card rounded-xl p-8">
               <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-6">
                 <span className="material-symbols-outlined text-secondary" style={{ fontVariationSettings: "'FILL' 1" }}>{c.icon}</span>
               </div>
@@ -505,7 +528,7 @@ const Home = () => {
         <SectionHeading eyebrow="Our Events" title="Where" highlight="creativity thrives" description="Workshops, competitions and live projects beyond the classroom." className="mb-16" />
         <div className="events-grid grid grid-cols-1 md:grid-cols-3 gap-gutter">
           {EVENTS.map((e) => (
-            <div key={e.title} className="group bg-surface border border-outline-variant rounded-xl p-8 hover:-translate-y-1 hover:soft-shadow hover:border-secondary/40 transition-all duration-300">
+            <div key={e.title} className="group bg-surface pop-card rounded-xl p-8">
               <span className="font-label-technical text-[10px] text-secondary border border-secondary/30 bg-secondary/5 rounded px-3 py-1 uppercase tracking-widest">{e.tag}</span>
               <h3 className="font-title-md text-title-md mt-6 mb-3">{e.title}</h3>
               <p className="text-on-surface-variant mb-4">{e.desc}</p>
@@ -522,7 +545,7 @@ const Home = () => {
         <SectionHeading eyebrow="Awards" title="Recognised for" highlight="excellence" description="Prestigious honours that reflect our commitment to quality AVGC-XR education." className="mb-16" />
         <div className="awards-grid grid grid-cols-1 sm:grid-cols-2 gap-gutter max-w-4xl">
           {AWARDS.map((a) => (
-            <div key={a.title} className="flex gap-5 bg-surface border border-outline-variant rounded-xl p-6 soft-shadow">
+            <div key={a.title} className="flex gap-5 bg-surface pop-card rounded-xl p-6">
               <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
                 <span className="material-symbols-outlined text-secondary text-2xl">emoji_events</span>
               </div>
@@ -549,7 +572,7 @@ const Home = () => {
             description="Partner with us to empower students and transform creative careers worldwide. Franchise, corporate training and campus collaborations welcome."
             className="mx-auto mb-10"
           />
-          <Link to="/contact" className="inline-flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all">
+          <Link to="/contact" className="btn-pop inline-flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-bold rounded-lg">
             Know More <span className="material-symbols-outlined text-lg">arrow_forward</span>
           </Link>
         </div>
@@ -557,8 +580,9 @@ const Home = () => {
 
       {/* Final CTA */}
       <section className="px-margin-mobile md:px-margin-desktop py-24 bg-background">
-        <div className="fade-up relative bg-ink text-on-ink rounded-3xl p-10 md:p-16 overflow-hidden text-center">
+        <div className="fade-up relative bg-ink text-on-ink rounded-3xl p-10 md:p-16 overflow-hidden text-center grain border-2 border-ink shadow-hard-coral">
           <div className="absolute inset-0 ink-grid-pattern opacity-40" />
+          <div className="absolute -left-20 -bottom-24 w-72 h-72 bg-tertiary/20 rounded-full blur-[100px]" />
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="font-display-xl text-headline-lg-mobile md:text-headline-lg text-on-ink mb-6">
               Ready to build a career that <span className="text-secondary">recruiters value?</span>
@@ -567,7 +591,7 @@ const Home = () => {
               Discover the MMC advantage — industry-ready skills for top careers in animation, VFX, gaming, design and more.
             </p>
             <Link to="/mmc-begin-your-professional-journey">
-              <button type="button" className="bg-secondary text-on-secondary px-12 py-5 font-body-md text-base font-semibold rounded-lg accent-glow hover:brightness-110 transition-all active:scale-95">
+              <button type="button" className="btn-pop-light bg-secondary text-on-secondary px-12 py-5 font-body-md text-base font-bold rounded-lg">
                 Enquire Now
               </button>
             </Link>
@@ -586,7 +610,7 @@ const Home = () => {
               description="Fill in the form and our counsellors will reach out within one business day."
             />
           </div>
-          <div className="fade-up bg-surface border border-outline-variant rounded-2xl p-8 soft-shadow">
+          <div className="fade-up bg-surface pop-card rounded-2xl p-8">
             <EnquiryForm />
           </div>
         </div>
