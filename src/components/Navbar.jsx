@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import gsap from 'gsap';
 import { COURSES } from '../data/site';
 
 const NAV_LINKS = [
@@ -8,12 +9,29 @@ const NAV_LINKS = [
   { label: 'Student Work', to: '/mmc-student-work-gallery' },
   { label: 'Faculty', to: '/mmc-faculty-mentors' },
   { label: 'Events', to: '/#events' },
+  { label: 'Contact', to: '/contact' },
 ];
 
 const Navbar = () => {
   const location = useLocation();
+  const navRef = useRef(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [coursesOpen, setCoursesOpen] = useState(false);
+
+  useLayoutEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const ctx = gsap.context(() => {
+      gsap.from('.nav-animate', {
+        y: -16,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.08,
+        ease: 'power3.out',
+        clearProps: 'all',
+      });
+    }, navRef);
+    return () => ctx.revert();
+  }, []);
 
   const isActive = (path) => location.pathname === path;
 
@@ -23,12 +41,12 @@ const Navbar = () => {
       : 'font-body-md text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors duration-200';
 
   return (
-    <nav className="w-full sticky top-0 z-[100] border-b border-outline-variant bg-surface/85 backdrop-blur-xl">
+    <nav ref={navRef} className="w-full sticky top-0 z-[100] border-b border-outline-variant bg-surface/85 backdrop-blur-xl">
       <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16">
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
-          className="flex items-center gap-2.5"
+          className="nav-animate flex items-center gap-2.5"
         >
           <span className="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-display-xl font-extrabold text-lg tracking-tighter">
             M
@@ -42,7 +60,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="nav-animate hidden lg:flex items-center gap-8">
           <div
             className="relative"
             onMouseEnter={() => setCoursesOpen(true)}
@@ -90,7 +108,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="nav-animate flex items-center gap-4">
           <Link to="/mmc-begin-your-professional-journey" className="hidden sm:block">
             <button className="bg-secondary text-on-secondary px-6 py-2.5 font-body-md text-sm font-semibold rounded-lg hover:bg-on-secondary-fixed hover:brightness-110 transition-all duration-150 accent-glow">
               Enquire Now

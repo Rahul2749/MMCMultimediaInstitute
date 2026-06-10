@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { COURSES } from '../data/site';
+import { COURSES, SITE_CONTACT } from '../data/site';
 
 const Footer = () => {
   return (
@@ -61,6 +61,8 @@ const Footer = () => {
               <li><Link className="font-body-md text-sm text-on-ink-variant hover:text-secondary transition-all" to="/mmc-begin-your-professional-journey">Admissions</Link></li>
               <li><a className="font-body-md text-sm text-on-ink-variant hover:text-secondary transition-all" href="/#recruiters">Placements</a></li>
               <li><a className="font-body-md text-sm text-on-ink-variant hover:text-secondary transition-all" href="/#events">Events</a></li>
+              <li><Link className="font-body-md text-sm text-on-ink-variant hover:text-secondary transition-all" to="/contact">Contact</Link></li>
+              <li><a className="font-body-md text-sm text-on-ink-variant hover:text-secondary transition-all" href="/#faq">FAQ</a></li>
             </ul>
           </div>
 
@@ -71,15 +73,19 @@ const Footer = () => {
             <ul className="space-y-4 mb-6">
               <li className="flex items-start gap-3 text-on-ink-variant font-body-md text-sm">
                 <span className="material-symbols-outlined text-secondary text-lg">location_on</span>
-                MMC Campus, Creative District, India
+                {SITE_CONTACT.address}
               </li>
               <li className="flex items-center gap-3 text-on-ink-variant font-body-md text-sm">
                 <span className="material-symbols-outlined text-secondary text-lg">call</span>
-                +91 00000 00000
+                <a href={`tel:${SITE_CONTACT.phone.replace(/\s/g, '')}`} className="hover:text-secondary transition-colors">
+                  {SITE_CONTACT.phone}
+                </a>
               </li>
               <li className="flex items-center gap-3 text-on-ink-variant font-body-md text-sm">
                 <span className="material-symbols-outlined text-secondary text-lg">mail</span>
-                admissions@mmcinstitute.in
+                <a href={`mailto:${SITE_CONTACT.email}`} className="hover:text-secondary transition-colors">
+                  {SITE_CONTACT.email}
+                </a>
               </li>
             </ul>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
@@ -103,8 +109,8 @@ const Footer = () => {
             © {new Date().getFullYear()} MMC Multimedia Institute. All rights reserved.
           </p>
           <div className="flex gap-8">
-            <a className="font-label-technical text-[10px] text-on-ink-variant hover:text-on-ink" href="#">Privacy Policy</a>
-            <a className="font-label-technical text-[10px] text-on-ink-variant hover:text-on-ink" href="#">Terms of Service</a>
+            <Link className="font-label-technical text-[10px] text-on-ink-variant hover:text-on-ink" to="/privacy">Privacy Policy</Link>
+            <Link className="font-label-technical text-[10px] text-on-ink-variant hover:text-on-ink" to="/terms">Terms of Service</Link>
           </div>
         </div>
       </div>

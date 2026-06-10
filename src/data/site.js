@@ -358,15 +358,173 @@ export const EVENTS = [
     tag: 'CREATIVE MINDS',
     title: 'Creative Minds Showcase',
     desc: 'Students from across cities showcase innovative projects, gain insights from industry experts and compete for recognition.',
+    link: '/#events',
   },
   {
     tag: 'NSM 2026',
     title: 'National Students Meet',
     desc: 'A national gathering to explore trends, share ideas and celebrate creativity in AVGC with industry stalwarts.',
+    link: '/#events',
   },
   {
     tag: 'MMC FEST',
     title: 'MMC Fest',
     desc: 'A grand stage for talented students — from singing and dancing to cosplay and fashion shows.',
+    link: '/#events',
   },
+];
+
+export const TRAINING_PARTNERS = [
+  { name: 'Adobe', abbr: 'Ad' },
+  { name: 'Autodesk', abbr: 'Au' },
+  { name: 'Blackmagic', abbr: 'Bm' },
+  { name: 'The Foundry', abbr: 'Nk' },
+  { name: 'Unity', abbr: 'U' },
+  { name: 'Unreal Engine', abbr: 'UE' },
+  { name: 'SideFX', abbr: 'H' },
+  { name: 'Maxon', abbr: 'Mx' },
+];
+
+export const STUDENT_WORK = [
+  {
+    title: 'Neo-Tokyo VFX',
+    category: 'VFX',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBz3PWeKMnQYLF2sQq_U9nUtnaID8k3OPQpf8TDTGHHUBdM4ceZ3Y-c2nohiO2tNqt9MJQIlVC9OK4pysdOOaRIvxj_9hFhD61GClZYs_XWT3dMXmcXxWpFC8q7VJKfSBEBKIv9qxwa424wBx1-E6KYAFnCPaZxKjGlKADaddhmAYn5FaaGA5hbQxFZTusMbeMXVFTjo0czCiT6WxeYak3OaFvjh4B3Rd8lCb4eAwGYP_29x_1qd_ShTlD7fBCFXCr7YoB3M8a7ZMtD',
+  },
+  {
+    title: 'The Silent Echo',
+    category: 'Film Editing',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuC1LEsxfuCPKbq9Ja9dzGetclnAO9lBDiTvuFN1I3Z3XGyJA5PNaiVrgLDG0bRmaSeZ76e2tiZhSG41xNrBZI6wVqGj7Hdjj9DbzSz5Okol3ithVh6VMvBny7SivffJ9PU1GixOPSrTcPePrjYZ6Kc6p2GsUWyimQQ9ML-mSXV1BgNeUxW6iHurUzR8Zakm30U9KCa6WRprCExnhtEei-IoJKJvIVb7SwpUzZSX5xruws-8D5U58ZMtmocLcGziR56RQuc00fjqhKc4',
+  },
+  {
+    title: 'Mechanical Titan',
+    category: '3D Animation',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAE8yDYVRQcqx8q_k8zHwI_S9EcygRw74v2BtaE3qEg5wGZZjYN7P0NpE0D1DOPH4x01aYmuqgpfiHQnopqExkH5waPU88xWgszm7LoJAAjdQRDqHmRfO-z7rseNMBB2XdwkI7obvdHhF77uGxSw4zLinJRk1zzpcz57NbGAZhKZIq-DPEUPKWGT2MBTS1YjfHvoyZfzdxPW2ASBKj1r1vHrH9D-AQhZ87MNHtkGKnaIce6ybl5dF1bY8AJJdyj8VLBl2uZ4b0ccwLZ',
+  },
+  {
+    title: 'Lumina Brand Identity',
+    category: 'Graphic Design',
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAZ7fFOlAhzaxkocFhNgp9E2jV6VLoCt3x7a0MMKk8HKMQBK4pbLoZuZzd-TAXICymAbiBWE6526FB-fVmYh6wt44iULyOC83LMpqdpkpAWmxyXy5uMF6A7W8hi4A7JBGx0pzccx98GzF0e3R3A5BpK1B5g1A4i17S0-HG8j2bu2uCezhVrAPECM31qPuQve_4oukNmifWFKUwi1MGKlQfYcwVLq1sFU3V3autagTLyKcXaqOnJG20YlwiMopzaOPF0y3vtkL_k7J9T',
+  },
+];
+
+export const FACULTY_PREVIEW = [
+  {
+    name: 'Marcus Thorne',
+    role: 'Senior VFX Supervisor',
+    tags: ['Nuke', 'TD Pipeline'],
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCi_X_43DzejvjW9GKH2W487VaVGRAgKfzsm1OPPkBObsoXa1eBf_wD6KijgZndpHWKJj9ndhgg-EGV2YuQtdQIQsfPKmE0mxQ_xPSTnmy2-t0YF5fqBBD_0RElpg52Zyxlwmj9ZuDTPstvq5zrdtFEw3tYSuUyzE_WwUWjt6h_jwk_ZW0YsqQgCBSb-IhFu-Gx_K5E82L7S5wctywA1i_JR0NQzgB8nXEqDAl9Kwo-16cE8YNMMYYFlH9Ig3phUsX532gIC8pvMkBG',
+    slug: '/mmc-faculty-mentors',
+  },
+  {
+    name: 'Elena Vance',
+    role: 'Creative Director',
+    tags: ['Brand Identity', 'Product Systems'],
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBz8BkouFP0dRSEorFuda5VBQWdhoxFlVsxSYgwqeRvZ95eZS5tNLA76ivxYSSpTxs0jQSLk3i37FiNbyn34iMDv2-43dYZMQaE6DSshdA9qw_J1NKM_HqTIGJwJ8JMZu19zDZTkEVFse1osMfiPI_8zDAlC6_n9ETqwiVlRQe0VQG-y7e2uonRBx3jlYVElWzKxPoS3SzZ3S7fCC01unb04AAhDSAc2mZk_zvRqu6xFsa8a-p5xy_eneljK3aFDBe1AULzDi4g0l11',
+    slug: '/mmc-faculty-mentors',
+  },
+  {
+    name: 'Sarah Chen',
+    role: 'Lead Character Animator',
+    tags: ['Maya', 'Creature Rig'],
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBONw9wwjjD_mbstxhcrhulWeCj5gQPY1OJ6IzYrpuR_mcaV6o4KykGDwgDxhCHJaMTSnThwy9LRbB5slFUqWknTkUsjY12HSlFWDriPu-Qdpg-UvUvAQpwiq6hficAkbOcSEQ4nCokocItSGhKDe_PsTD4_8UhUxTPXBk1l_n03TE5iG_ooTSa4yU7NA8aA7mTegJNwXxnWSeaDkhk7EQnn3sad0ROx2xGRx8T-E3CxWU9WHBwDwx6Xh_QAHkk5p1os9aKaFbW4VGJ',
+    slug: '/mmc-faculty-mentors',
+  },
+  {
+    name: 'David Miller',
+    role: 'Senior Film Editor',
+    tags: ['Narrative Pacing', 'DaVinci Resolve'],
+    image:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCQdS2Xm__2Ld2KNHiFUZo3tvKETz5I0jDg-3oLUvZbGYhO_bGJgrPPHgdlRN_vge1G2v1RxH3jlWAuSR40mls3LoJ6ey_nwBukG2hOayh-ztarZR9fWCaPHRpQhUEqMV13v61FYq47AUAnEVTzX8bReKMjjmQSfZnhFzyqiFoGfa2i4gxzPjknkYk7Uuyw9Xn3OsM7ERwggP4a3CTO41bJy3fYGpe6seuRmTojbwAGsZ7fJPfP3xOnFfVLDOfVuhQ1FtiMcCx0rW6M',
+    slug: '/mmc-faculty-mentors',
+  },
+];
+
+export const STUDENT_TESTIMONIALS = [
+  {
+    quote:
+      'MMC gave me the studio pipeline experience I needed. Within six months of graduating I was contributing to a major OTT series as a junior compositor.',
+    name: 'Priya Sharma',
+    course: 'VFX Specialist',
+    city: 'Mumbai',
+  },
+  {
+    quote:
+      'The faculty are actively working in the industry — every critique felt like a real production review. My demo reel finally got me callbacks.',
+    name: 'Arjun Mehta',
+    course: '3D Animation',
+    city: 'Bengaluru',
+  },
+  {
+    quote:
+      'From Figma to live client projects, the design track pushed me beyond tutorials. I landed my first agency role before course completion.',
+    name: 'Neha Kapoor',
+    course: 'Graphic & Web Design',
+    city: 'Delhi NCR',
+  },
+];
+
+export const CAMPUS_FACILITIES = [
+  { icon: 'desktop_windows', title: 'High-Performance Labs', desc: 'Dedicated workstations with GPUs for real-time rendering and compositing.' },
+  { icon: 'videocam', title: 'Chroma & Shoot Floor', desc: 'Green-screen stage and camera gear for live-action integration projects.' },
+  { icon: 'groups', title: 'Collaboration Studios', desc: 'Team bays modelled on real studio dailies and review workflows.' },
+  { icon: 'library_books', title: 'Asset Library', desc: 'Curated textures, HDRIs and reference packs for production-quality work.' },
+];
+
+export const AWARDS = [
+  { year: '2024', title: 'Best AVGC Training Institute', org: 'India Education Summit' },
+  { year: '2023', title: 'Excellence in VFX Education', org: 'FICCI Frames' },
+  { year: '2023', title: 'Top Placement Record — Creative Media', org: 'Career Connect Awards' },
+  { year: '2022', title: 'Innovation in Curriculum Design', org: 'EdTech Review India' },
+];
+
+export const FAQ = [
+  {
+    q: 'What courses does MMC offer?',
+    a: 'MMC offers career-focused programs in Animation, VFX, Graphic & Web Design, Film Making & Editing, Gaming & Interactive, and Broadcast & ArchViz — each aligned with industry hiring needs.',
+  },
+  {
+    q: 'Do I need prior experience to apply?',
+    a: 'No prior professional experience is required. We assess creative aptitude and motivation. A portfolio or personal work is helpful for advanced tracks but not mandatory for beginners.',
+  },
+  {
+    q: 'Does MMC provide placement assistance?',
+    a: 'Yes. Our placement cell connects graduates with 90+ hiring partners across animation, VFX, gaming, design and broadcast studios, with portfolio reviews and interview prep.',
+  },
+  {
+    q: 'What is the duration of programs?',
+    a: 'Programs range from 16 to 24 weeks depending on the specialization. Each includes hands-on projects, mentor feedback and a portfolio-ready capstone.',
+  },
+  {
+    q: 'Are certifications included?',
+    a: 'Students train on industry-standard software from partners including Adobe, Autodesk, Blackmagic and Unreal. Course completion certificates are awarded by MMC upon successful graduation.',
+  },
+  {
+    q: 'How do I enrol?',
+    a: 'Submit the enquiry form on our website or visit a centre. Our admissions team will schedule counselling, share batch dates and guide you through enrollment.',
+  },
+];
+
+export const SITE_CONTACT = {
+  phone: '+91 98765 43210',
+  email: 'admissions@mmcinstitute.in',
+  whatsapp: '919876543210',
+  address: 'MMC Campus, Creative District, Andheri East, Mumbai 400069, India',
+  hours: 'Mon – Sat, 9:00 AM – 7:00 PM',
+};
+
+export const CENTRES = [
+  { city: 'Mumbai', state: 'Maharashtra' },
+  { city: 'Bengaluru', state: 'Karnataka' },
+  { city: 'Delhi NCR', state: 'Delhi' },
+  { city: 'Hyderabad', state: 'Telangana' },
+  { city: 'Pune', state: 'Maharashtra' },
+  { city: 'Chennai', state: 'Tamil Nadu' },
 ];

@@ -22,6 +22,9 @@ const MmcVisualEffectsCurriculum = lazy(() => import('./pages/MmcVisualEffectsCu
 const MmcGamingCurriculum = lazy(() => import('./pages/MmcGamingCurriculum'));
 const MmcBroadcastCurriculum = lazy(() => import('./pages/MmcBroadcastCurriculum'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
 
 const PageLoader = () => (
   <div className="min-h-[60vh] flex items-center justify-center">
@@ -54,6 +57,9 @@ function App() {
             <Route path="/mmc-student-dashboard-mission-control" element={<MmcStudentDashboardMissionControl />} />
             <Route path="/mmc-vfx-production-pipeline-tracker" element={<MmcVfxProductionPipelineTracker />} />
             <Route path="/mmc-asset-library-production-repository" element={<MmcAssetLibraryProductionRepository />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
