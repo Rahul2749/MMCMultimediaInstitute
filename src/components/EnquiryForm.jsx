@@ -10,11 +10,11 @@ const EnquiryForm = ({ compact = false }) => {
   };
 
   const inputClass =
-    'w-full bg-surface-container-lowest border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface placeholder:text-outline focus:ring-0 focus:border-secondary glow-secondary transition-colors';
+    'w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-on-surface placeholder:text-on-surface-variant focus:ring-0 studio-glow transition-all';
 
   if (submitted) {
     return (
-      <div className="tonal-layer-2 rounded-xl p-10 text-center">
+      <div className="text-center py-6">
         <span className="material-symbols-outlined text-5xl text-secondary mb-4">verified</span>
         <h3 className="font-headline-lg text-title-md mb-2">Enquiry received</h3>
         <p className="text-on-surface-variant">
@@ -52,9 +52,9 @@ const EnquiryForm = ({ compact = false }) => {
       </p>
       <button
         type="submit"
-        className="w-full bg-secondary-container text-on-secondary-container px-8 py-4 font-label-technical text-label-technical font-bold rounded-lg inner-glow-btn hover:bg-secondary hover:text-on-secondary transition-all active:scale-[0.99]"
+        className="w-full bg-secondary text-on-secondary px-8 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all active:scale-[0.99]"
       >
-        SUBMIT ENQUIRY
+        Submit Enquiry
       </button>
     </form>
   );

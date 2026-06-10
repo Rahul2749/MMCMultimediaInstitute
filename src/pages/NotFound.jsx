@@ -16,8 +16,8 @@ const NotFound = () => (
         The page you're looking for has been moved or never rendered. Let's get you back on track.
       </p>
       <Link to="/">
-        <button className="bg-secondary-container text-on-secondary-container px-10 py-4 font-label-technical text-label-technical font-bold rounded-lg inner-glow-btn hover:bg-secondary hover:text-on-secondary transition-all">
-          BACK TO HOME
+        <button className="bg-secondary text-on-secondary px-10 py-4 font-body-md text-sm font-semibold rounded-lg accent-glow hover:brightness-110 transition-all">
+          Back to Home
         </button>
       </Link>
     </div>

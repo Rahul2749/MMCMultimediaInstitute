@@ -7,9 +7,14 @@
       scroll-behavior: smooth;
   }
   body {
-      background-color: #131313;
-      color: #e5e2e1;
+      background-color: #F6F8F9;
+      color: #0E1217;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+  }
+  ::selection {
+      background-color: #0D9488;
+      color: #FFFFFF;
   }
 }
 
@@ -17,87 +22,105 @@
   .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
+
+  /* Light translucent panel (used on dark ink hero) */
   .glass-panel {
-      background: rgba(32, 32, 32, 0.7);
+      background: rgba(12, 17, 22, 0.55);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.10);
   }
   .technical-stroke {
-      border: 1px solid #444748;
+      border: 1px solid #DCE3E5;
   }
   .scrubber-thumb {
       width: 2px;
       height: 100%;
-      background-color: #cc003c;
+      background-color: #14B8A6;
       position: absolute;
       left: 45%;
   }
 
-  /* Tonal layering (port from Stitch designs) */
+  /* Light surface cards */
   .tonal-layer-1 {
-      background-color: #1b1b1c;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      background-color: #FFFFFF;
+      border: 1px solid rgba(14, 18, 23, 0.08);
   }
   .tonal-layer-2 {
-      background-color: #202020;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: #F2F5F6;
+      border: 1px solid rgba(14, 18, 23, 0.08);
   }
   .studio-border {
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(14, 18, 23, 0.10);
   }
   .studio-card:hover .studio-border {
-      border-color: rgba(204, 0, 60, 0.4);
+      border-color: rgba(13, 148, 136, 0.5);
+  }
+
+  /* Dark ink cards (inside spotlight sections) */
+  .ink-card {
+      background-color: #131C22;
+      border: 1px solid #2A363D;
   }
 
   /* Glows & highlights */
   .inner-glow-btn {
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
   }
   .accent-glow {
-      box-shadow: 0 0 20px rgba(204, 0, 60, 0.2);
+      box-shadow: 0 10px 30px -10px rgba(13, 148, 136, 0.45);
+  }
+  .soft-shadow {
+      box-shadow: 0 1px 2px rgba(14, 18, 23, 0.04), 0 8px 24px -12px rgba(14, 18, 23, 0.12);
   }
   .pink-glow {
-      text-shadow: 0 0 10px rgba(255, 179, 182, 0.4);
+      text-shadow: 0 0 10px rgba(20, 184, 166, 0.4);
   }
   .glow-secondary:focus {
-      box-shadow: 0 0 10px rgba(204, 0, 60, 0.3);
-      border-color: #cc003c;
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.18);
+      border-color: #0D9488;
   }
 
-  /* Technical grid backgrounds */
+  /* Technical grid backgrounds (light) */
   .vfx-grid-pattern {
       background-image:
-          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
+          linear-gradient(rgba(14, 18, 23, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(14, 18, 23, 0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
   }
   .grid-overlay {
       background-image:
-          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-      background-size: 40px 40px;
+          linear-gradient(rgba(14, 18, 23, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(14, 18, 23, 0.05) 1px, transparent 1px);
+      background-size: 44px 44px;
+  }
+  /* Grid on dark ink sections */
+  .ink-grid-pattern {
+      background-image:
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 44px 44px;
   }
   .nle-divider {
-      border-color: #444748;
+      border-color: #DCE3E5;
   }
 
   /* Form focus glow */
   .studio-glow:focus {
       outline: none;
-      border-color: #adc6ff;
-      box-shadow: 0 0 0 2px rgba(173, 198, 255, 0.2);
+      border-color: #0D9488;
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.18);
   }
 
-  /* Timeline scrubber (film editing) */
+  /* Timeline scrubber */
   .timeline-scrubber {
       height: 2px;
-      background: #444748;
+      background: #DCE3E5;
       position: relative;
   }
   .timeline-playhead {
       width: 2px;
       height: 12px;
-      background: #cc003c;
+      background: #0D9488;
       position: absolute;
       top: -5px;
       left: 35%;
@@ -107,8 +130,8 @@
   .scanline {
       width: 100%;
       height: 2px;
-      background: linear-gradient(to right, transparent, #ffb3b6, transparent);
-      opacity: 0.3;
+      background: linear-gradient(to right, transparent, #14B8A6, transparent);
+      opacity: 0.4;
       position: absolute;
       top: 0;
       animation: scan 8s linear infinite;
@@ -126,19 +149,51 @@
       width: 4px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #444748;
+      background: #DCE3E5;
       border-radius: 9999px;
   }
+}
 
-  /* Marquee for recruiter/partner logos */
-  .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: marquee 40s linear infinite;
-  }
-  .marquee-track:hover {
-      animation-play-state: paused;
-  }
+/* ===== App-screen scope =====
+   Deep "workstation" pages (dashboard, pipeline, asset library, case study)
+   stay intentionally dark as cinematic in-app screens. We remap the light
+   surface/text/border tokens back to dark within this scope only. */
+.app-screen {
+  background-color: #0C1116;
+  color: #EEF3F4;
+  min-height: calc(100vh - 4rem);
+}
+.app-screen .bg-background,
+.app-screen .bg-surface-dim,
+.app-screen .bg-surface-container-lowest { background-color: #0C1116 !important; }
+.app-screen .bg-surface,
+.app-screen .bg-surface-container-low { background-color: #131C22 !important; }
+.app-screen .bg-surface-container,
+.app-screen .bg-surface-variant,
+.app-screen .bg-primary-container { background-color: #1A242B !important; }
+.app-screen .bg-surface-container-high { background-color: #233038 !important; }
+.app-screen .bg-surface-container-highest,
+.app-screen .bg-surface-bright { background-color: #2A363D !important; }
+
+.app-screen .text-on-surface,
+.app-screen .text-on-background,
+.app-screen .text-primary { color: #EEF3F4 !important; }
+.app-screen .text-on-surface-variant,
+.app-screen .text-on-primary-container { color: #93A1A8 !important; }
+.app-screen .text-outline { color: #6B7780 !important; }
+
+.app-screen .border-outline-variant { border-color: #2A363D !important; }
+.app-screen .border-outline { border-color: #3A464D !important; }
+
+.app-screen .technical-stroke,
+.app-screen .studio-border { border-color: #2A363D !important; }
+.app-screen .tonal-layer-1 { background-color: #131C22 !important; border-color: #2A363D !important; }
+.app-screen .tonal-layer-2 { background-color: #1A242B !important; border-color: #2A363D !important; }
+.app-screen .vfx-grid-pattern,
+.app-screen .grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) !important;
 }
 
 @keyframes marquee {

@@ -39,7 +39,7 @@ const MmcVfxProductionPipelineTracker = () => {
   };
 
   return (
-    <>
+    <div className="app-screen">
       {/* 
         To add GSAP reveals, add ref={addToRefs} to <section> tags.
         Example: <section ref={addToRefs} className="...">
@@ -286,7 +286,7 @@ const MmcVfxProductionPipelineTracker = () => {
 
 
 
-    </>
+    </div>
   );
 };
 

@@ -19,45 +19,49 @@ const Navbar = () => {
 
   const linkClass = (path) =>
     isActive(path)
-      ? 'font-label-technical text-label-technical text-secondary'
-      : 'font-label-technical text-label-technical text-on-surface-variant hover:text-on-surface transition-colors duration-200';
+      ? 'font-body-md text-sm font-semibold text-secondary'
+      : 'font-body-md text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors duration-200';
 
   return (
-    <nav className="w-full sticky top-0 z-[100] border-b border-outline-variant bg-background/95 backdrop-blur-md">
+    <nav className="w-full sticky top-0 z-[100] border-b border-outline-variant bg-surface/85 backdrop-blur-xl">
       <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16">
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
-          className="font-display-xl text-headline-lg font-extrabold text-secondary tracking-tighter flex items-baseline gap-2"
+          className="flex items-center gap-2.5"
         >
-          MMC
-          <span className="hidden sm:inline font-label-technical text-[10px] tracking-widest text-on-surface-variant uppercase">
-            Multimedia Institute
+          <span className="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-display-xl font-extrabold text-lg tracking-tighter">
+            M
+          </span>
+          <span className="flex flex-col leading-none">
+            <span className="font-display-xl text-lg font-extrabold text-on-surface tracking-tight">MMC</span>
+            <span className="font-label-technical text-[9px] tracking-[0.2em] text-on-surface-variant uppercase">
+              Multimedia Institute
+            </span>
           </span>
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-8">
-          {/* Courses dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setCoursesOpen(true)}
             onMouseLeave={() => setCoursesOpen(false)}
           >
-            <button className="font-label-technical text-label-technical text-on-surface-variant hover:text-on-surface transition-colors duration-200 flex items-center gap-1 uppercase">
+            <button className="font-body-md text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors duration-200 flex items-center gap-1">
               Courses
               <span className="material-symbols-outlined text-base">expand_more</span>
             </button>
             {coursesOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[420px]">
-                <div className="tonal-layer-2 rounded-xl p-3 grid grid-cols-1 gap-1 shadow-2xl">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[440px]">
+                <div className="bg-surface border border-outline-variant rounded-xl p-3 grid grid-cols-1 gap-1 soft-shadow">
                   {COURSES.map((c) => (
                     <Link
                       key={c.slug}
                       to={c.slug}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container-high transition-colors group"
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container-low transition-colors group"
                     >
-                      <span className="font-label-technical text-[10px] text-secondary border border-outline-variant rounded px-2 py-1 w-14 text-center">
+                      <span className="font-label-technical text-[10px] text-secondary border border-secondary/30 bg-secondary/5 rounded px-2 py-1 w-14 text-center">
                         {c.code}
                       </span>
                       <div>
@@ -73,7 +77,7 @@ const Navbar = () => {
             )}
           </div>
 
-          {NAV_LINKS.map((l) => (
+          {NAV_LINKS.map((l) =>
             l.to.startsWith('/#') ? (
               <a key={l.label} href={l.to} className={linkClass(l.to)}>
                 {l.label}
@@ -83,16 +87,15 @@ const Navbar = () => {
                 {l.label}
               </Link>
             )
-          ))}
+          )}
         </div>
 
         <div className="flex items-center gap-4">
           <Link to="/mmc-begin-your-professional-journey" className="hidden sm:block">
-            <button className="bg-secondary-container text-on-secondary-container px-6 py-2 font-label-technical text-label-technical font-bold rounded-lg inner-glow-btn hover:bg-secondary hover:text-on-secondary active:opacity-80 transition-all duration-150">
+            <button className="bg-secondary text-on-secondary px-6 py-2.5 font-body-md text-sm font-semibold rounded-lg hover:bg-on-secondary-fixed hover:brightness-110 transition-all duration-150 accent-glow">
               Enquire Now
             </button>
           </Link>
-          {/* Mobile toggle */}
           <button
             className="lg:hidden material-symbols-outlined text-on-surface"
             onClick={() => setMobileOpen((v) => !v)}
@@ -105,7 +108,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-outline-variant bg-background px-margin-mobile py-6 space-y-6">
+        <div className="lg:hidden border-t border-outline-variant bg-surface px-margin-mobile py-6 space-y-6">
           <div>
             <div className="font-label-technical text-[10px] uppercase tracking-widest text-on-surface-variant mb-3">
               Courses
@@ -116,7 +119,7 @@ const Navbar = () => {
                   key={c.slug}
                   to={c.slug}
                   onClick={() => setMobileOpen(false)}
-                  className="font-label-technical text-label-technical text-on-surface-variant hover:text-secondary p-2 rounded bg-surface-container-low"
+                  className="font-body-md text-sm font-medium text-on-surface-variant hover:text-secondary p-2.5 rounded-lg bg-surface-container-low"
                 >
                   {c.title}
                 </Link>
@@ -130,7 +133,7 @@ const Navbar = () => {
                   key={l.label}
                   href={l.to}
                   onClick={() => setMobileOpen(false)}
-                  className="font-label-technical text-label-technical text-on-surface-variant"
+                  className="font-body-md text-sm font-medium text-on-surface-variant"
                 >
                   {l.label}
                 </a>
@@ -139,7 +142,7 @@ const Navbar = () => {
                   key={l.label}
                   to={l.to}
                   onClick={() => setMobileOpen(false)}
-                  className="font-label-technical text-label-technical text-on-surface-variant"
+                  className="font-body-md text-sm font-medium text-on-surface-variant"
                 >
                   {l.label}
                 </Link>
@@ -147,7 +150,7 @@ const Navbar = () => {
             )}
           </div>
           <Link to="/mmc-begin-your-professional-journey" onClick={() => setMobileOpen(false)}>
-            <button className="w-full bg-secondary-container text-on-secondary-container px-6 py-3 font-label-technical text-label-technical font-bold rounded-lg">
+            <button className="w-full bg-secondary text-on-secondary px-6 py-3 font-body-md text-sm font-semibold rounded-lg">
               Enquire Now
             </button>
           </Link>
